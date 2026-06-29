@@ -123,51 +123,6 @@
     });
   }
 
-  function initOrcamentoForm() {
-    const form = document.getElementById('bl-orcamento-form');
-    if (!form) return;
-    const formspreeMeta = document.querySelector('meta[name="blackline-formspree"]');
-    const formspreeId = formspreeMeta?.getAttribute('content')?.trim() || '';
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const nome = /** @type {HTMLInputElement} */ (document.getElementById('bl-nome'))?.value.trim();
-      const tel = /** @type {HTMLInputElement} */ (document.getElementById('bl-tel'))?.value.trim();
-      const veiculo = /** @type {HTMLInputElement} */ (document.getElementById('bl-veiculo'))?.value.trim();
-      const servico = /** @type {HTMLSelectElement} */ (document.getElementById('bl-servico'))?.selectedOptions[0]?.text;
-      const msg = /** @type {HTMLTextAreaElement} */ (document.getElementById('bl-msg'))?.value.trim();
-      const lines = [
-        'Olá, BlackLine! Gostaria de um orçamento.',
-        nome ? `Nome: ${nome}` : '',
-        tel ? `WhatsApp: ${tel}` : '',
-        veiculo ? `Veículo: ${veiculo}` : '',
-        servico ? `Serviço: ${servico}` : '',
-        msg ? `Detalhes: ${msg}` : '',
-      ].filter(Boolean);
-
-      if (formspreeId) {
-        try {
-          await fetch(`https://formspree.io/f/${formspreeId}`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-            body: JSON.stringify({
-              nome,
-              telefone: tel,
-              veiculo,
-              servico,
-              mensagem: msg,
-              _subject: 'Orçamento BlackLine',
-            }),
-          });
-        } catch (err) {
-          console.warn('[BlackLine] Formspree indisponível', err);
-        }
-      }
-
-      window.open(`https://wa.me/${WA}?text=${encodeURIComponent(lines.join('\n'))}`, '_blank', 'noopener');
-    });
-  }
-
   function initBaCompare() {
     document.querySelectorAll('[data-ba]').forEach((wrap) => {
       const slider = wrap.querySelector('.bl-ba__slider');
@@ -224,7 +179,6 @@
     initCounters,
     initHeatSlider,
     initPpfHotspots,
-    initOrcamentoForm,
     initBaCompare,
     initTintSimulator,
     injectWaFloat,
@@ -236,7 +190,6 @@
       initCounters();
       initHeatSlider();
       initPpfHotspots();
-      initOrcamentoForm();
       initBaCompare();
       initTintSimulator();
       injectWaFloat();
@@ -250,7 +203,6 @@
     initCounters();
     initHeatSlider();
     initPpfHotspots();
-    initOrcamentoForm();
     initBaCompare();
     initTintSimulator();
   });
