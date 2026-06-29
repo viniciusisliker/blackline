@@ -1,27 +1,19 @@
 import { useEffect, useState } from 'react';
-import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
+import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import { BlackLineLogo } from '../components/BlackLineLogo';
 import { NavIcon } from '../components/NavIcon';
 import { HUB_NAV_ITEMS } from '../lib/hubNav';
-import { useAuth } from '../contexts/AuthContext';
 import styles from './DashboardLayout.module.css';
 
+const TEAM_NAME = 'Equipe BlackLine';
+
 export function DashboardLayout() {
-  const { profile, signOut } = useAuth();
-  const navigate = useNavigate();
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     setMenuOpen(false);
   }, [location.pathname]);
-
-  const handleSignOut = async () => {
-    await signOut();
-    navigate('/login');
-  };
-
-  const shortName = profile?.nome?.trim().split(/\s+/)[0] ?? 'Perfil';
 
   return (
     <div className={styles.shell}>
@@ -63,12 +55,9 @@ export function DashboardLayout() {
               Site
             </a>
             <NavLink to="/perfil" className={styles.profileBtn}>
-              <span className={styles.profileAvatar}>{shortName.charAt(0).toUpperCase()}</span>
-              <span className={styles.profileName}>{shortName}</span>
+              <span className={styles.profileAvatar}>{TEAM_NAME.charAt(0)}</span>
+              <span className={styles.profileName}>Equipe</span>
             </NavLink>
-            <button type="button" className={styles.signOutBtn} onClick={() => void handleSignOut()}>
-              Sair
-            </button>
           </div>
         </div>
       </header>
@@ -77,7 +66,7 @@ export function DashboardLayout() {
         <div className={styles.mobileNav} role="presentation">
           <button type="button" className={styles.mobileBackdrop} onClick={() => setMenuOpen(false)} aria-label="Fechar" />
           <nav className={styles.mobileDrawer} aria-label="Menu mobile">
-            <p className={styles.mobileUser}>{profile?.nome}</p>
+            <p className={styles.mobileUser}>{TEAM_NAME}</p>
             <ul className={styles.mobileNavList}>
               {HUB_NAV_ITEMS.map((item) => (
                 <li key={item.to}>
@@ -94,9 +83,6 @@ export function DashboardLayout() {
                 </li>
               ))}
             </ul>
-            <button type="button" className="btn-ghost" onClick={() => void handleSignOut()}>
-              Sair
-            </button>
           </nav>
         </div>
       )}

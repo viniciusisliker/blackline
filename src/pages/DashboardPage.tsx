@@ -1,11 +1,9 @@
 import { PageHeader } from '../components/PageHeader';
 import { BLACKLINE_PRODUCTS } from '../data/blackline';
 import { getClients } from '../lib/hubStore';
-import { useAuth } from '../contexts/AuthContext';
 import styles from './DashboardPage.module.css';
 
 export function DashboardPage() {
-  const { profile } = useAuth();
   const clients = getClients();
   const emAndamento = clients.filter((c) => c.status === 'Em andamento').length;
 
@@ -14,11 +12,7 @@ export function DashboardPage() {
       <PageHeader
         badge="Overview"
         title="Painel"
-        subtitle={
-          profile?.nome
-            ? `${profile.nome} — visão geral da BlackLine`
-            : 'Visão geral da BlackLine'
-        }
+        subtitle="Equipe BlackLine — visão geral da operação"
       />
 
       <div className={styles.kpiGrid}>

@@ -1,5 +1,5 @@
 import { PageHeader } from '../components/PageHeader';
-import { HUB_CREDENTIALS, FORMSPREE_ID } from '../lib/authConfig';
+import { FORMSPREE_ID } from '../lib/siteConfig';
 import styles from './ConfiguracoesPage.module.css';
 
 export function ConfiguracoesPage() {
@@ -15,23 +15,10 @@ export function ConfiguracoesPage() {
       <PageHeader
         badge="Sistema"
         title="Configurações"
-        subtitle="Variáveis de ambiente e dados locais do Hub."
+        subtitle="Integrações e dados locais do Hub."
       />
 
       <div className={styles.grid}>
-        <article className={styles.card}>
-          <h2 className={styles.cardTitle}>
-            <span className="material-symbols-outlined">lock</span>
-            Acesso Hub
-          </h2>
-          <p>
-            Usuário configurado: <strong>{HUB_CREDENTIALS.user}</strong>
-          </p>
-          <p className={styles.muted}>
-            Defina <code>VITE_HUB_USER</code> e <code>VITE_HUB_PASSWORD</code> no arquivo <code>.env</code> para produção.
-          </p>
-        </article>
-
         <article className={styles.card}>
           <h2 className={styles.cardTitle}>
             <span className="material-symbols-outlined">mail</span>
