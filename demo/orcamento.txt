@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Orçamento - Premium Shield</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Config injected from guidelines -->
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "tertiary-fixed": "#ffe16d",
+                "surface-container-high": "#272a2e",
+                "secondary": "#adc7ff",
+                "surface-dim": "#101417",
+                "inverse-on-surface": "#2d3135",
+                "surface-bright": "#36393e",
+                "primary-fixed": "#dde3eb",
+                "on-secondary-container": "#00285b",
+                "on-error": "#690005",
+                "inverse-surface": "#e0e2e8",
+                "on-tertiary-container": "#776300",
+                "surface-container": "#1c2024",
+                "on-tertiary-fixed-variant": "#544600",
+                "on-secondary-fixed-variant": "#004493",
+                "on-tertiary": "#3a3000",
+                "surface-container-highest": "#323539",
+                "outline": "#8e9195",
+                "tertiary": "#ffffff",
+                "error": "#ffb4ab",
+                "secondary-container": "#4a8eff",
+                "primary-container": "#dde3eb",
+                "on-error-container": "#ffdad6",
+                "tertiary-fixed-dim": "#e9c400",
+                "surface": "#101417",
+                "on-surface-variant": "#c5c6cb",
+                "on-secondary": "#002e68",
+                "surface-container-lowest": "#0b0f12",
+                "on-tertiary-fixed": "#221b00",
+                "secondary-fixed": "#d8e2ff",
+                "on-primary-container": "#5f656c",
+                "tertiary-container": "#ffe16d",
+                "background": "#101417",
+                "secondary-fixed-dim": "#adc7ff",
+                "on-surface": "#e0e2e8",
+                "surface-tint": "#c1c7cf",
+                "on-background": "#e0e2e8",
+                "inverse-primary": "#595f66",
+                "on-primary-fixed": "#161c22",
+                "primary-fixed-dim": "#c1c7cf",
+                "surface-variant": "#323539",
+                "on-primary": "#2b3137",
+                "primary": "#ffffff",
+                "on-secondary-fixed": "#001a41",
+                "on-primary-fixed-variant": "#41474e",
+                "outline-variant": "#44474a",
+                "error-container": "#93000a",
+                "surface-container-low": "#181c20"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "margin-desktop": "64px",
+                "container-max": "1280px",
+                "gutter": "24px",
+                "unit": "8px",
+                "margin-mobile": "20px"
+        },
+        "fontFamily": {
+                "body-md": [
+                        "Inter"
+                ],
+                "display-lg": [
+                        "Hanken Grotesk"
+                ],
+                "headline-lg": [
+                        "Hanken Grotesk"
+                ],
+                "headline-sm": [
+                        "Hanken Grotesk"
+                ],
+                "display-lg-mobile": [
+                        "Hanken Grotesk"
+                ],
+                "label-md": [
+                        "Geist"
+                ],
+                "label-sm": [
+                        "Geist"
+                ],
+                "body-lg": [
+                        "Inter"
+                ]
+        },
+        "fontSize": {
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "display-lg": [
+                        "64px",
+                        {
+                                "lineHeight": "72px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-sm": [
+                        "20px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "display-lg-mobile": [
+                        "40px",
+                        {
+                                "lineHeight": "48px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "label-md": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.08em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        /* Custom styles for sharp, industrial aesthetic */
+        .slash-divider {
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), 0 100%);
+        }
+        .form-input {
+            border-radius: 0; /* Sharp corners for technical feel */
+            transition: all 0.3s ease;
+        }
+        .form-input:focus {
+            outline: none;
+            box-shadow: none;
+            border-bottom-color: theme('colors.primary-container');
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col selection:bg-tertiary-container selection:text-on-tertiary-container">
+<!-- TopNavBar (Shared Component) -->
+<nav class="bg-background/95 border-b border-outline-variant/30 backdrop-blur-md fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-full">
+<div class="font-display-lg text-[28px] md:text-headline-lg font-black tracking-tighter text-primary-container uppercase">
+            PREMIUM SHIELD
+        </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary-fixed hover:bg-primary-container hover:text-on-primary-container transition-all duration-300 px-3 py-2 uppercase" href="#">Películas Térmicas</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary-fixed hover:bg-primary-container hover:text-on-primary-container transition-all duration-300 px-3 py-2 uppercase" href="#">Antivandalismo</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary-fixed hover:bg-primary-container hover:text-on-primary-container transition-all duration-300 px-3 py-2 uppercase" href="#">PPF</a>
+</div>
+<button class="font-label-md text-label-md uppercase bg-tertiary-container text-on-tertiary-container px-6 py-3 hover:bg-tertiary-fixed-dim transition-all duration-300 scale-95 duration-150 ease-in-out font-bold">
+            Orçamento Grátis
+        </button>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-[140px] pb-[120px] px-margin-mobile md:px-margin-desktop relative">
+<!-- Ambient Background Texture -->
+<div class="absolute inset-0 z-0 opacity-20 pointer-events-none" data-alt="A highly detailed, ultra-high-resolution macro photography shot of brushed dark carbon fiber, dimly lit with sharp, cinematic lighting that highlights the geometric textures. The mood is industrial, aggressive, and luxurious. Deep blacks with subtle, almost imperceptible golden reflections." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBE99cpCFIKDSz17G9L8_o7i3VL8W5UulCJ-7lHjB05WySlkgio3eWELXHBIk-E4_OoQLWpDI9umfjXQdwHV_000_DWug7qHTVU68-H8KRPZhYihqbFdwzhM5uUZfQR2yR42b8-mzEMZSXM7b3SleeKznbtEVbRvjZw1WdWAYX-EUHWvHVXAr_PZVTbZeSnWibflyef95PwNr7pwPH704Y9G9wZXpvI70lPl8wYrWE4ELhTj0dK7nNgfgkh2Ff9TA7YGjRFEQfPyrj-'); background-size: cover; background-position: center;"></div>
+<div class="relative z-10 max-w-7xl mx-auto">
+<header class="mb-16">
+<div class="w-1 bg-tertiary-container h-12 inline-block align-middle mr-4"></div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface inline-block align-middle">
+                    SOLICITE SEU ORÇAMENTO
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-4 max-w-2xl">
+                    Proteção de alta performance e estética automotiva de luxo. Preencha os dados abaixo e nossa equipe técnica entrará em contato com uma proposta personalizada.
+                </p>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Form Column -->
+<div class="lg:col-span-7 bg-surface-container-low p-8 border-t border-outline-variant relative overflow-hidden">
+<!-- Subtle accent corner -->
+<div class="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-primary-container/50 opacity-50"></div>
+<form class="flex flex-col gap-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase" for="nome">Nome Completo</label>
+<input class="form-input w-full bg-surface-container-highest border-0 border-b border-outline-variant py-3 px-4 text-on-surface placeholder-on-surface-variant/50 focus:border-tertiary-container focus:bg-surface-container-high" id="nome" placeholder="Seu nome" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase" for="telefone">WhatsApp</label>
+<input class="form-input w-full bg-surface-container-highest border-0 border-b border-outline-variant py-3 px-4 text-on-surface placeholder-on-surface-variant/50 focus:border-tertiary-container focus:bg-surface-container-high" id="telefone" placeholder="(00) 00000-0000" type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase" for="veiculo">Modelo do Veículo</label>
+<input class="form-input w-full bg-surface-container-highest border-0 border-b border-outline-variant py-3 px-4 text-on-surface placeholder-on-surface-variant/50 focus:border-tertiary-container focus:bg-surface-container-high" id="veiculo" placeholder="Ex: Porsche 911" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase" for="servico">Serviço de Interesse</label>
+<select class="form-input w-full bg-surface-container-highest border-0 border-b border-outline-variant py-3 px-4 text-on-surface focus:border-tertiary-container focus:bg-surface-container-high appearance-none" id="servico">
+<option class="text-on-surface-variant/50" disabled="" selected="" value="">Selecione uma opção</option>
+<option value="ppf">Paint Protection Film (PPF)</option>
+<option value="termica">Película Térmica</option>
+<option value="antivandalismo">Antivandalismo</option>
+<option value="estetica">Estética Automotiva Completa</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase" for="mensagem">Detalhes Adicionais (Opcional)</label>
+<textarea class="form-input w-full bg-surface-container-highest border-0 border-b border-outline-variant py-3 px-4 text-on-surface placeholder-on-surface-variant/50 focus:border-tertiary-container focus:bg-surface-container-high resize-none" id="mensagem" placeholder="Conte-nos mais sobre o que você busca para o seu veículo..." rows="4"></textarea>
+</div>
+<div class="mt-4 flex justify-end">
+<button class="group relative inline-flex items-center justify-center font-label-md text-label-md uppercase bg-tertiary-container text-on-tertiary-container px-8 py-4 hover:bg-tertiary-fixed transition-colors overflow-hidden font-bold rounded" type="button">
+<span class="relative z-10 flex items-center gap-2">
+                                    Enviar Solicitação
+                                    <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Info Column (Bento Grid Style) -->
+<div class="lg:col-span-5 flex flex-col gap-gutter">
+<!-- WhatsApp Direct Card -->
+<div class="bg-surface-container-high p-8 border-l-4 border-secondary-container flex flex-col justify-center relative overflow-hidden group cursor-pointer hover:bg-surface-container-highest transition-colors">
+<div class="absolute -right-10 -top-10 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-[150px]">chat</span>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-4 mb-4">
+<div class="bg-secondary-container/10 p-3 rounded-full">
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">forum</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Atendimento Rápido</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                                Prefere falar diretamente com um especialista? Chame agora no WhatsApp para um atendimento imediato.
+                            </p>
+<div class="font-label-md text-label-md text-tertiary-container text-xl tracking-widest">
+                                +55 (11) 99999-0000
+                            </div>
+</div>
+</div>
+<!-- Location Card -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 flex flex-col flex-grow">
+<div class="h-48 relative overflow-hidden bg-surface-dim">
+<img class="w-full h-full object-cover opacity-60" data-alt="A stylized, high-contrast digital map interface showing a sleek, modern urban street layout. The map uses a dark mode aesthetic with profound black backgrounds, subtle grey road lines, and a glowing, vibrant gold pin dropping on a central location. The style is technical, precise, and premium." data-location="São Paulo, Brasil" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDheiQm863NMlMyjhJeWC0MOU-9UbH7HhXpNQnTKZfXP9VFvC4GtA5z-AvpT7uPJk99JlykSlIkgKzIOpyhnYxyXG8NBk2N7ydzzjFvaLV5NtCAs3DhRG6nOpJFGjHSC6yrE4LqnUzyBOZ3ZRAQYNUeg39LGpEHdyQjiO6IPE_JlnMoiE_gsDC4f_KKyOWq7IrS6A0eKdpMaKZiuSgWU8sNw85QXLsv3sOxxz3K0VJY6CRFrSXR_xBygEA4caFBdCph6AomjwrcGngw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent"></div>
+</div>
+<div class="p-8 flex flex-col gap-4">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary-container mt-1">location_on</span>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface uppercase mb-1">Studio Premium</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                                        Av. Europa, 1000 - Jardins<br/>
+                                        São Paulo - SP, 01449-000
+                                    </p>
+</div>
+</div>
+<div class="flex items-start gap-4 mt-2">
+<span class="material-symbols-outlined text-tertiary-container mt-1">schedule</span>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface uppercase mb-1">Horário de Funcionamento</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                                        Seg - Sex: 08:00 às 18:00<br/>
+                                        Sáb: 09:00 às 13:00 (Apenas agendado)
+                                    </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant/50 w-full py-12 px-margin-mobile md:px-margin-desktop mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-7xl mx-auto">
+<div class="md:col-span-4 mb-8">
+<span class="font-display-lg text-[48px] md:text-display-lg text-primary-container uppercase">PREMIUM SHIELD AUTO ESTÉTICA</span>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary-fixed-dim focus:outline-none focus:underline-offset-4 focus:underline transition-all uppercase" href="#">Sobre Nós</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary-fixed-dim focus:outline-none focus:underline-offset-4 focus:underline transition-all uppercase" href="#">Serviços</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary-fixed-dim focus:outline-none focus:underline-offset-4 focus:underline transition-all uppercase" href="#">Garantia</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary-fixed-dim focus:outline-none focus:underline-offset-4 focus:underline transition-all uppercase" href="#">Termos de Uso</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary-fixed-dim focus:outline-none focus:underline-offset-4 focus:underline transition-all uppercase" href="#">Privacidade</a>
+</div>
+<div class="md:col-span-4 mt-8 pt-8 border-t border-outline-variant/20">
+<p class="font-body-md text-body-md text-on-surface-variant/60">
+                    © 2024 PREMIUM SHIELD AUTO ESTÉTICA. TODOS OS DIREITOS RESERVADOS.
+                </p>
+</div>
+</div>
+</footer>
+</body></html>

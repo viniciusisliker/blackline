@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orçamento — BlackLine</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/blackline-site.css" />
+</head>
+<body class="bl-grain" data-page="orcamento">
+  <div id="bl-navbar"></div>
+  <main class="bl-page">
+    <section class="bl-section" style="padding-top:calc(var(--bl-nav-h) + 3rem)">
+      <div class="bl-container bl-reveal is-visible">
+        <p class="bl-eyebrow">Atendimento</p>
+        <h1 class="bl-display" style="font-size:clamp(1.75rem,4vw,2.75rem)">Solicite seu <span>orçamento</span></h1>
+        <p class="bl-lead">Preencha os dados e envie direto para nosso WhatsApp — resposta rápida da equipe técnica.</p>
+
+        <div class="bl-split" style="margin-top:2.5rem;gap:2rem">
+          <div class="bl-card" style="padding:2rem">
+            <form class="bl-form" id="bl-orcamento-form">
+              <div class="bl-form-grid bl-form-grid--2">
+                <div class="bl-field">
+                  <label for="bl-nome">Nome completo</label>
+                  <input type="text" id="bl-nome" name="nome" placeholder="Seu nome" required />
+                </div>
+                <div class="bl-field">
+                  <label for="bl-tel">WhatsApp</label>
+                  <input type="tel" id="bl-tel" name="tel" placeholder="(11) 90000-0000" required />
+                </div>
+              </div>
+              <div class="bl-form-grid bl-form-grid--2">
+                <div class="bl-field">
+                  <label for="bl-veiculo">Modelo do veículo</label>
+                  <input type="text" id="bl-veiculo" name="veiculo" placeholder="Ex: Porsche 911" />
+                </div>
+                <div class="bl-field">
+                  <label for="bl-servico">Serviço de interesse</label>
+                  <select id="bl-servico" name="servico" required>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="ppf">PPF — Paint Protection Film</option>
+                    <option value="termica">Película Térmica (carbon / Ceramic BLACK)</option>
+                    <option value="vidro">Shield / Defense GLASS</option>
+                    <option value="antivandalismo">Antivandalismo (Ps4 / Ps8)</option>
+                    <option value="completo">Pacote completo BlackLine</option>
+                  </select>
+                </div>
+              </div>
+              <div class="bl-field">
+                <label for="bl-msg">Detalhes adicionais</label>
+                <textarea id="bl-msg" name="msg" rows="4" placeholder="Conte-nos o que busca para o seu veículo…"></textarea>
+              </div>
+              <button type="submit" class="bl-btn bl-btn--gold" style="width:100%;margin-top:0.5rem">
+                Enviar via WhatsApp <span class="material-symbols-outlined">arrow_forward</span>
+              </button>
+            </form>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:1.25rem">
+            <article class="bl-card bl-glass" style="border-left:4px solid #25d366">
+              <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem">
+                <span class="material-symbols-outlined" style="font-size:2rem;color:#25d366">forum</span>
+                <h3 class="bl-h3" style="margin:0">Atendimento rápido</h3>
+              </div>
+              <p style="margin:0 0 1rem;color:var(--bl-text-muted);font-size:0.9rem">Prefere falar agora? Chame no WhatsApp.</p>
+              <a href="https://wa.me/5511939287036" class="bl-btn bl-btn--ghost" target="_blank" rel="noopener" style="width:100%">(11) 93928-7036</a>
+            </article>
+            <article class="bl-card">
+              <h3 class="bl-h3" style="display:flex;align-items:center;gap:0.5rem"><span class="material-symbols-outlined" style="color:var(--bl-gold)">location_on</span> Studio</h3>
+              <p style="margin:0.5rem 0 0;color:var(--bl-text-muted);font-size:0.9rem">
+                Av. Engenheiro Caetano Álvares, 3004<br />São Paulo — SP
+              </p>
+              <p style="margin:1rem 0 0;font-size:0.8rem;color:var(--bl-text-muted)">
+                <span class="material-symbols-outlined" style="font-size:1rem;vertical-align:middle;color:var(--bl-gold)">schedule</span>
+                Seg–Sex 8h–18h · Sáb sob agendamento
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="bl-footer"></div>
+  <script src="js/site.js" defer></script>
+  <script src="js/blackline.js" defer></script>
+  <script src="components.js" defer></script>
+</body>
+</html>

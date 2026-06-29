@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Antivandalismo - PREMIUM SHIELD</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@500&amp;family=Hanken+Grotesk:wght@600;700&amp;family=Inter:wght@400&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "tertiary-fixed": "#ffe16d",
+                "surface-container-high": "#272a2e",
+                "secondary": "#adc7ff",
+                "surface-dim": "#101417",
+                "inverse-on-surface": "#2d3135",
+                "surface-bright": "#36393e",
+                "primary-fixed": "#dde3eb",
+                "on-secondary-container": "#00285b",
+                "on-error": "#690005",
+                "inverse-surface": "#e0e2e8",
+                "on-tertiary-container": "#776300",
+                "surface-container": "#1c2024",
+                "on-tertiary-fixed-variant": "#544600",
+                "on-secondary-fixed-variant": "#004493",
+                "on-tertiary": "#3a3000",
+                "surface-container-highest": "#323539",
+                "outline": "#8e9195",
+                "tertiary": "#ffffff",
+                "error": "#ffb4ab",
+                "secondary-container": "#4a8eff",
+                "primary-container": "#dde3eb",
+                "on-error-container": "#ffdad6",
+                "tertiary-fixed-dim": "#e9c400",
+                "surface": "#101417",
+                "on-surface-variant": "#c5c6cb",
+                "on-secondary": "#002e68",
+                "surface-container-lowest": "#0b0f12",
+                "on-tertiary-fixed": "#221b00",
+                "secondary-fixed": "#d8e2ff",
+                "on-primary-container": "#5f656c",
+                "tertiary-container": "#ffe16d",
+                "background": "#101417",
+                "secondary-fixed-dim": "#adc7ff",
+                "on-surface": "#e0e2e8",
+                "surface-tint": "#c1c7cf",
+                "on-background": "#e0e2e8",
+                "inverse-primary": "#595f66",
+                "on-primary-fixed": "#161c22",
+                "primary-fixed-dim": "#c1c7cf",
+                "surface-variant": "#323539",
+                "on-primary": "#2b3137",
+                "primary": "#ffffff",
+                "on-secondary-fixed": "#001a41",
+                "on-primary-fixed-variant": "#41474e",
+                "outline-variant": "#44474a",
+                "error-container": "#93000a",
+                "surface-container-low": "#181c20"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "margin-desktop": "64px",
+                "container-max": "1280px",
+                "gutter": "24px",
+                "unit": "8px",
+                "margin-mobile": "20px"
+        },
+        "fontFamily": {
+                "body-md": [
+                        "Inter"
+                ],
+                "display-lg": [
+                        "Hanken Grotesk"
+                ],
+                "headline-lg": [
+                        "Hanken Grotesk"
+                ],
+                "headline-sm": [
+                        "Hanken Grotesk"
+                ],
+                "display-lg-mobile": [
+                        "Hanken Grotesk"
+                ],
+                "label-md": [
+                        "Geist"
+                ],
+                "label-sm": [
+                        "Geist"
+                ],
+                "body-lg": [
+                        "Inter"
+                ]
+        },
+        "fontSize": {
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "display-lg": [
+                        "64px",
+                        {
+                                "lineHeight": "72px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-sm": [
+                        "20px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "display-lg-mobile": [
+                        "40px",
+                        {
+                                "lineHeight": "48px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "label-md": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.08em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .slash-divider-top {
+            clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
+        }
+        .slash-divider-bottom {
+            clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+        }
+        .slash-divider-both {
+            clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+        }
+      </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/95 dark:bg-background/95 border-b border-outline-variant/30 backdrop-blur-md transition-all duration-300">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-full">
+<a class="font-display-lg-mobile text-headline-sm font-black tracking-tighter text-primary-container dark:text-primary-container" href="#">
+                PREMIUM SHIELD
+            </a>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary-fixed hover:bg-primary-container hover:text-on-primary-container px-3 py-2 rounded transition-all duration-300 uppercase" href="#">
+                    Películas Térmicas
+                </a>
+<a class="font-label-sm text-label-sm text-primary-container border-b-2 border-primary-container pb-1 hover:bg-primary-container hover:text-on-primary-container px-3 py-2 transition-all duration-300 scale-95 uppercase" href="#">
+                    Antivandalismo
+                </a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary-fixed hover:bg-primary-container hover:text-on-primary-container px-3 py-2 rounded transition-all duration-300 uppercase" href="#">
+                    PPF
+                </a>
+</div>
+<button class="hidden md:block bg-primary-container text-on-primary-container font-label-sm text-label-sm px-6 py-3 rounded hover:invert transition-all duration-300 uppercase">
+                Orçamento Grátis
+            </button>
+<!-- Mobile Menu Button (Icon Only) -->
+<button class="md:hidden text-primary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu</span>
+</button>
+</div>
+</nav>
+<main class="flex-grow pt-[80px]">
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex items-center px-margin-mobile md:px-margin-desktop py-[120px] overflow-hidden">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-transparent z-10"></div>
+<img class="w-full h-full object-cover" data-alt="A cinematic, high-contrast close-up of a dark luxury sports car's side window. The glass has a subtle, highly technical geometric overlay hinting at armored protection. The scene is illuminated by dramatic, moody low-key lighting with sharp silver and deep industrial blue accents, emphasizing the vehicle's aggressive sophistication and exclusivity in a pristine, shadowy detailing studio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe8MUeXaINfe4kugJ2L0nErohN-jaWzRhoilRqYiTuPeTe3yJ6woEy6js8Ap-2vOgDjNsbTio8NnBSJOXgW3hNQLN69xYpoddGwfRt_HZbnYrnvgXpy1p12Wng28kZ1N37Rhg7Eg5fiUDyFdJ3n6E7saWg6v0bjFvKd9KtWopkELryYju5wD39s5V6hkVCSj8D26IxBcLsuXA0vNXcpB7Nu_bb50kyHjlF7c9gVxgxkOq_yxuRPgSGmJScZY_Pqhq_CCoIZmHVCS-6"/>
+</div>
+<div class="relative z-20 max-w-3xl">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-1 h-8 bg-tertiary-fixed"></div>
+<span class="font-label-sm text-label-sm text-tertiary-fixed tracking-widest uppercase">Segurança Automotiva Avançada</span>
+</div>
+<h1 class="font-display-lg-mobile md:text-display-lg text-primary mb-6">
+                    BLINDAGEM INVISÍVEL CONTRA IMPACTOS.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-2xl">
+                    Nossa linha de películas de segurança Antivandalismo eleva a proteção do seu veículo a níveis industriais. Projetada para resistir a ataques violentos e prevenir o estilhaçamento do vidro, garantindo a integridade dos ocupantes em situações extremas.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-8 py-4 rounded hover:invert transition-all duration-300 flex items-center gap-2 uppercase">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed">shield</span>
+                        SOLICITAR ORÇAMENTO
+                    </button>
+</div>
+</div>
+</section>
+<!-- Technical Specs Section (Bento Grid) -->
+<section class="px-margin-mobile md:px-margin-desktop py-[120px] bg-surface-container-lowest slash-divider-both">
+<div class="max-w-7xl mx-auto">
+<div class="mb-12 text-center">
+<h2 class="font-display-lg-mobile md:text-display-lg text-primary mb-4">NÍVEIS DE PROTEÇÃO</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Engenharia de precisão para máxima absorção de energia cinética.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-unit">
+<!-- PS4 Card -->
+<div class="bg-surface-container-low p-8 rounded-lg border-t border-outline-variant/30 hover:bg-surface-container-high transition-colors group">
+<div class="flex items-start justify-between mb-6">
+<div class="flex items-center gap-3">
+<div class="w-1 h-6 bg-tertiary-fixed"></div>
+<h3 class="font-headline-lg text-headline-lg text-primary">PS4</h3>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-tertiary-fixed transition-colors" style="font-variation-settings: 'FILL' 1;">security</span>
+</div>
+<div class="mb-6 flex items-center justify-center py-6">
+<div class="relative w-32 h-32 rounded-full border-4 border-outline-variant flex items-center justify-center">
+<div class="absolute inset-2 rounded-full border-2 border-tertiary-fixed flex items-center justify-center">
+<span class="font-display-lg-mobile text-display-lg-mobile text-tertiary-fixed">40</span>
+</div>
+<span class="absolute -bottom-4 bg-surface-container-low px-2 font-label-sm text-label-sm text-on-surface-variant uppercase">KG IMPACTO</span>
+</div>
+</div>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]">check_circle</span>
+<span class="font-label-md text-label-md text-on-surface">Resistência a golpes rápidos</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]">check_circle</span>
+<span class="font-label-md text-label-md text-on-surface">Ideal para áreas urbanas de médio risco</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]">check_circle</span>
+<span class="font-label-md text-label-md text-on-surface">Espessura otimizada para vidros laterais</span>
+</li>
+</ul>
+</div>
+<!-- PS8 Card -->
+<div class="bg-surface-container-low p-8 rounded-lg border-t border-secondary-container hover:bg-surface-container-high transition-colors group relative overflow-hidden lg:col-span-2">
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary-container/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
+<div class="flex flex-col md:flex-row h-full gap-8">
+<div class="flex-1">
+<div class="flex items-start justify-between mb-6">
+<div class="flex items-center gap-3">
+<div class="w-1 h-6 bg-tertiary-fixed"></div>
+<h3 class="font-headline-lg text-headline-lg text-primary">PS8</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-tertiary-fixed bg-tertiary-fixed px-3 py-1 rounded uppercase">MÁXIMA PROTEÇÃO</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                                    Nossa camada mais espessa e resistente. O PS8 oferece uma barreira formidável contra ataques prolongados e força bruta extrema, mantendo a estrutura do vidro coesa mesmo após múltiplas fraturas.
+                                </p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]">hardware</span>
+<span class="font-label-md text-label-md text-on-surface">Resistência contra ataques com objetos pesados (ex: martelos, pedras grandes)</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]">timer</span>
+<span class="font-label-md text-label-md text-on-surface">Atrasa significativamente a intrusão, permitindo tempo de reação</span>
+</li>
+</ul>
+</div>
+<div class="flex-1 flex items-center justify-center">
+<div class="relative w-48 h-48 rounded-full border-4 border-outline-variant flex items-center justify-center">
+<div class="absolute inset-2 rounded-full border-2 border-tertiary-fixed flex items-center justify-center">
+<span class="font-display-lg text-display-lg text-tertiary-fixed">65</span>
+</div>
+<span class="absolute -bottom-4 bg-surface-container-low px-4 font-label-sm text-label-sm text-on-surface-variant tracking-widest uppercase">KG IMPACTO</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Mechanism Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-[120px] bg-background">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-gutter items-center">
+<div class="lg:w-1/2">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-1 h-6 bg-secondary-container"></div>
+<h2 class="font-display-lg-mobile md:text-display-lg-mobile text-primary">TECNOLOGIA DE COESÃO</h2>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+                        O verdadeiro perigo em um impacto não é apenas a intrusão, mas os estilhaços de vidro projetados em alta velocidade. Nossa película atua como uma rede de retenção estrutural.
+                    </p>
+<div class="space-y-6">
+<div class="bg-surface-container-high p-6 rounded border-l-4 border-secondary-container">
+<h4 class="font-label-md text-label-md text-primary mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed">breaking_news_alt_1</span>
+                                Prevenção de Estilhaçamento
+                            </h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Mantém os fragmentos de vidro perigosamente afiados unidos à película, evitando ferimentos graves aos ocupantes.</p>
+</div>
+<div class="bg-surface-container-high p-6 rounded border-l-4 border-outline-variant hover:border-secondary-container transition-colors">
+<h4 class="font-label-md text-label-md text-primary mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed">view_in_ar</span>
+                                Integridade Estrutural
+                            </h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Mesmo quebrado, o vidro permanece no caixilho, impedindo o acesso imediato ao interior do veículo.</p>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2 w-full h-[500px] bg-surface-container-low rounded-lg border border-outline-variant/30 overflow-hidden relative">
+<!-- Placeholder for technical diagram/graphic -->
+<div class="w-full h-full bg-cover bg-center mix-blend-luminosity opacity-80" data-alt="A highly detailed, technical 3D cross-section diagram of automotive glass treated with security film. The aesthetic is dark and industrial, using a deep surface-dim background. The glass layers are rendered in icy, translucent silver and blue tones, while the security film layer is highlighted with an aggressive, glowing industrial gold (primary-container). High-contrast cinematic lighting emphasizes the microscopic strength and cohesion of the materials under stress." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAJiH19w8RzxbE6Wyen7fEfcdMMeTBGmPEZMBxcju2-ecE0xJO8xGcfAanxtPZi-h2RVVUo6-Zq-cxyPbtBHmQMlqO9F065_9oaYZmPXOsAeQBQfcgz7oCrJV_kppwe5iIUxiqSB1PDBM6tz_BVPNGTtFTcfh3ttXUkteyg6Hg_8gIOZhahb1TpGikXuYoXFY3joI3IAkgmGYZvEkMu4EiTdDFn9by0YhrZvTBqVDSj2tTum1CyWNHG4bYOsLx8tfOeRK84cCgBxcON')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent flex items-end p-8">
+<span class="font-label-sm text-label-sm text-tertiary-fixed tracking-widest uppercase">ANÁLISE ESTRUTURAL MULTICAMADA</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/50 w-full py-12 px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-2 mb-8 md:mb-0">
+<div class="font-display-lg-mobile text-headline-sm text-primary-container mb-4 font-black tracking-tighter">
+                    PREMIUM SHIELD
+                </div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm mb-6">
+                    A estética automotiva elevada à máxima performance e proteção.
+                </p>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-auto uppercase">
+                    © 2024 PREMIUM SHIELD AUTO ESTÉTICA. TODOS OS DIREITOS RESERVADOS.
+                </div>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-sm text-label-sm text-secondary-container mb-2 uppercase">NAVEGAÇÃO</span>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors focus:outline-none focus:underline-offset-4 focus:underline hover:text-primary-fixed-dim" href="#">Sobre Nós</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors focus:outline-none focus:underline-offset-4 focus:underline hover:text-primary-fixed-dim" href="#">Serviços</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors focus:outline-none focus:underline-offset-4 focus:underline hover:text-primary-fixed-dim" href="#">Garantia</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-sm text-label-sm text-secondary-container mb-2 uppercase">LEGAL</span>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors focus:outline-none focus:underline-offset-4 focus:underline hover:text-primary-fixed-dim" href="#">Termos de Uso</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors focus:outline-none focus:underline-offset-4 focus:underline hover:text-primary-fixed-dim" href="#">Privacidade</a>
+</div>
+</div>
+</footer>
+</body></html>

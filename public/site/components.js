@@ -25,7 +25,9 @@
     inject('bl-footer', footer);
     setActiveLink();
     window.BlackLineSite?.initMobileNav?.();
-    window.BlackLineTheme?.initButtons?.();
+    window.BlackLine?.initNavScroll?.();
+    window.BlackLine?.initReveal?.();
+    window.BlackLine?.injectWaFloat?.();
   } catch (err) {
     console.error('[BlackLine components.js]', err);
   }

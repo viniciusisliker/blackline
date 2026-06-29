@@ -87,8 +87,8 @@ export const BLACKLINE_PRODUCTS: BlackLineProduct[] = [
 ];
 
 export const MOCK_CLIENTS = [
-  { id: '1', nome: 'João Silva', veiculo: 'BMW X5', servico: 'PPF + Ceramic BLACK', status: 'Em andamento' },
-  { id: '2', nome: 'Maria Costa', veiculo: 'Porsche 911', servico: 'Defense GLASS', status: 'Agendado' },
-  { id: '3', nome: 'Carlos Mendes', veiculo: 'Mercedes C300', servico: 'Shield GLASS', status: 'Concluído' },
-  { id: '4', nome: 'Ana Oliveira', veiculo: 'Audi Q7', servico: 'Ps8 + carbon BLACK', status: 'Em andamento' },
+  { id: '1', nome: 'Rafael M.', veiculo: 'Porsche 911', servico: 'PPF Full + Ceramic BLACK', status: 'Em andamento' },
+  { id: '2', nome: 'Camila S.', veiculo: 'BMW X5', servico: 'Defense GLASS + Ps8', status: 'Agendado' },
+  { id: '3', nome: 'Eduardo L.', veiculo: 'Mercedes AMG GT', servico: 'Shield GLASS', status: 'Concluído' },
+  { id: '4', nome: 'Patricia R.', veiculo: 'Audi RS6', servico: 'carbon BLACK + PPF capô', status: 'Em andamento' },
 ];

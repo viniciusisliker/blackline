@@ -90,7 +90,7 @@ export function LoginPage() {
         </form>
 
         <p className={styles.back}>
-          <a href={`${import.meta.env.BASE_URL}site/home.html`}>← Voltar ao site</a>
+          <a href={`${import.meta.env.BASE_URL}site/index.html`}>← Voltar ao site</a>
         </p>
       </div>
     </div>

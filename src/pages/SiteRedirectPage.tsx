@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const SITE_HOME = import.meta.env.BASE_URL + 'site/home.html';
+const SITE_HOME = import.meta.env.BASE_URL + 'site/index.html';
 
 export function SiteRedirectPage() {
   useEffect(() => {

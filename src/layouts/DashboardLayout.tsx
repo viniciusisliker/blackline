@@ -59,7 +59,7 @@ export function DashboardLayout() {
           </nav>
 
           <div className={styles.hubNavUtilities}>
-            <a href={`${import.meta.env.BASE_URL}site/home.html`} className={styles.utilityLink}>
+            <a href={`${import.meta.env.BASE_URL}site/index.html`} className={styles.utilityLink}>
               Site
             </a>
             <NavLink to="/perfil" className={styles.profileBtn}>

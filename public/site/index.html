@@ -1,29 +1,155 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="dark" data-theme-mode="auto">
+<html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BlackLine Studio Automotivo</title>
-  <meta name="description" content="Proteção premium para seu veículo — películas, PPF e sistemas de segurança." />
+  <title>BlackLine Studio Automotivo — Proteção Premium</title>
+  <meta name="description" content="Películas térmicas, antivandalismo, PPF e sistemas de proteção para vidros. BlackLine Studio Automotivo — São Paulo." />
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/blackline-site.css" />
-  <script src="js/theme.js"></script>
 </head>
-<body>
-  <main class="bl-splash">
+<body class="bl-grain" data-page="home">
+  <div class="bl-preloader" id="bl-preloader" aria-hidden="true">
     <div>
-      <div class="bl-splash__logo">
-        <img src="img/favicon.svg" alt="" width="72" height="72" />
-      </div>
-      <h1 class="bl-splash__title">Proteção <em>premium</em></h1>
-      <p class="bl-splash__lead">O melhor para seu veículo está na BlackLine — sistemas de proteção automotiva de alta performance.</p>
-      <a href="home.html" class="bl-btn bl-btn--gold">
-        Conhecer produtos
-        <span class="material-symbols-outlined">arrow_forward</span>
-      </a>
+      <img src="img/favicon.svg" alt="" class="bl-preloader__shield" width="64" height="64" />
+      <div class="bl-preloader__bar"><span></span></div>
     </div>
+  </div>
+
+  <div id="bl-navbar"></div>
+
+  <main class="bl-page">
+    <section class="bl-hero" data-parallax>
+      <div class="bl-hero__media">
+        <div class="bl-hero__media-bg" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuBb-pNk6Y2ZzyiclGWmcDrdAM4T2F7w1Z7xFmns6FjWnaQCgPwmoGvF_Cc9Wlmo7wzXSmJ_P8U2Zt0am02P-FQQvV6uG6xUKY9URmYLNfyAbyML9MbuAO_iKcTFHTWtnmBVWw4-4uNjg7lt9agzDexocLDreAd8Oa6fsKthrUk5EJMTFmuLDVhO8jTfI2A442DTD5baNRRSTTyKN2QYeTBQo-kqe8jYEk6OWVtzEq_j4E5qwnl9wjzPoJikW53KyvddCL6nfQlZAq-0')"></div>
+        <div class="bl-hero__overlay"></div>
+      </div>
+      <div class="bl-hero__content bl-reveal is-visible">
+        <p class="bl-eyebrow">Studio Automotivo · São Paulo</p>
+        <h1 class="bl-display">Proteção <span>máxima</span><br />para seu veículo</h1>
+        <p class="bl-lead">Películas térmicas, antivandalismo, PPF e reforço de vidros com garantia de até 10 anos. A armadura que seu carro merece — com a assinatura BlackLine.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:2rem">
+          <a href="orcamento.html" class="bl-btn bl-btn--gold">Orçamento grátis <span class="material-symbols-outlined" style="font-size:1rem">arrow_forward</span></a>
+          <a href="#servicos" class="bl-btn bl-btn--ghost">Explorar serviços</a>
+        </div>
+      </div>
+      <div class="bl-hero__scroll" aria-hidden="true"><span>Scroll</span><span></span></div>
+    </section>
+
+    <section class="bl-section" style="padding-top:0">
+      <div class="bl-container bl-reveal">
+        <div class="bl-stats">
+          <div class="bl-stat"><strong data-count="10" data-suffix="">0</strong><span>Anos de garantia</span></div>
+          <div class="bl-stat"><strong data-count="7" data-suffix="">0</strong><span>Linhas de produto</span></div>
+          <div class="bl-stat"><strong data-count="180" data-suffix="kg">0</strong><span>Impacto Defense GLASS</span></div>
+          <div class="bl-stat"><strong data-count="90" data-suffix="%">0</strong><span>Rejeição térmica Ceramic</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bl-section bl-slash bg-elevated" id="servicos" style="background:var(--bl-bg-elevated)">
+      <div class="bl-container">
+        <h2 class="bl-h2 bl-reveal">Películas térmicas</h2>
+        <p class="bl-lead bl-reveal bl-reveal-delay-1" style="margin-bottom:2.5rem">Conforto térmico e estética agressiva em preto profundo.</p>
+        <div class="bl-grid bl-grid--2">
+          <article class="bl-card bl-reveal">
+            <div style="display:flex;gap:1.25rem;align-items:center;margin-bottom:1rem">
+              <div class="bl-warranty"><strong>7</strong><span>DE<br/>GARANTIA</span></div>
+              <div class="bl-product-name"><span class="light">carbon</span><span class="bold">BLACK</span></div>
+            </div>
+            <p>Alta performance com estabilidade de cor e excelente visibilidade interna. Nanotecnologia de carbono não metalizado.</p>
+          </article>
+          <article class="bl-card bl-reveal bl-reveal-delay-1">
+            <div style="display:flex;gap:1.25rem;align-items:center;margin-bottom:1rem">
+              <div class="bl-warranty"><strong>10</strong><span>DE<br/>GARANTIA</span></div>
+              <div class="bl-product-name"><span class="light">Ceramic</span><span class="bold">BLACK</span></div>
+            </div>
+            <p>Máxima rejeição de calor com partículas de nanocerâmica. Conforto térmico superior e clareza óptica cristalina.</p>
+          </article>
+        </div>
+        <p style="margin-top:1.5rem;text-align:center"><a href="peliculas.html" class="bl-btn bl-btn--ghost">Ver comparativo técnico</a></p>
+      </div>
+    </section>
+
+    <section class="bl-section" id="vidros">
+      <div class="bl-container">
+        <h2 class="bl-h2 bl-reveal">Sistemas de proteção · Vidros</h2>
+        <p class="bl-lead bl-reveal bl-reveal-delay-1" style="margin-bottom:2.5rem">Reforço estrutural exclusivo BlackLine para integridade do vidro em impactos.</p>
+        <div class="bl-grid bl-grid--2">
+          <article class="bl-card bl-reveal">
+            <span style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--bl-gold);display:block;margin-bottom:0.5rem">7 anos · Shield Glass Plus</span>
+            <h3 class="bl-h3">Shield GLASS</h3>
+            <p style="margin:0.5rem 0 1rem;color:var(--bl-gold-bright);font-weight:600">Reforço 20× no vidro</p>
+            <ul class="bl-checklist">
+              <li><span class="material-symbols-outlined">check_circle</span>Proteção contra objetos cortantes</li>
+              <li><span class="material-symbols-outlined">check_circle</span>Plus: rejeição de calor adicional</li>
+            </ul>
+          </article>
+          <article class="bl-card bl-reveal bl-reveal-delay-1" style="border-top-color:rgba(232,197,71,0.5)">
+            <span style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--bl-gold);display:block;margin-bottom:0.5rem">10 anos · Defense Glass Plus</span>
+            <h3 class="bl-h3">Defense GLASS</h3>
+            <p style="margin:0.5rem 0 1rem;color:var(--bl-gold-bright);font-weight:600">Reforço 30× · suporta 180 kg</p>
+            <ul class="bl-checklist">
+              <li><span class="material-symbols-outlined">check_circle</span>Máxima resistência a impactos</li>
+              <li><span class="material-symbols-outlined">check_circle</span>Ideal para veículos premium</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bl-section bl-slash-rev" style="background:var(--bl-surface-low)">
+      <div class="bl-container bl-split">
+        <div class="bl-reveal">
+          <div class="bl-warranty" style="margin-bottom:1.5rem"><strong>10</strong><span>DE<br/>GARANTIA</span></div>
+          <h2 class="bl-display" style="font-size:clamp(1.75rem,4vw,2.5rem)">Películas<br /><span>antivandalismo</span></h2>
+          <div style="margin-top:1.5rem">
+            <p style="font-size:1.1rem;margin:0 0 0.75rem;padding-left:1rem;border-left:3px solid var(--bl-gold)">Ps4 — suporta <strong style="color:var(--bl-gold-bright)">40 kg</strong> de impacto</p>
+            <p style="font-size:1.1rem;margin:0;padding-left:1rem;border-left:3px solid var(--bl-gold)">Ps8 — suporta <strong style="color:var(--bl-gold-bright)">65 kg</strong> de impacto</p>
+          </div>
+          <a href="antivandalismo.html" class="bl-btn bl-btn--gold" style="margin-top:2rem">Conhecer a tecnologia</a>
+        </div>
+        <div class="bl-split__media bl-reveal bl-reveal-delay-2">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSfnzZP2z4_mLRArNbMaek1XDKrAR-Z8gTu3pQ_KSavbtP63aItBV4Z7bbP_MYlNbDshGzhZ0ak0rcuAneqxs40PPcwiNFisFzRn1TXxraVIVTT3ZvVI81xzrOs9oixMFmBAiX0tWAOgKqpnBH-jMzYJ2hCa-r-Z9hpcOddIZtl2SXOL4aCZAq0lSV-cSYkYJITxdky-zPG_NC70DfeBOwMZhSCurcMjV969yItgUYUnAfR92-J85Ljg7J7L5i_-9HmoZaPIibNQ4F" alt="" loading="lazy" />
+          <div class="bl-split__media-overlay"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bl-section">
+      <div class="bl-container bl-split">
+        <div class="bl-split__media bl-reveal" style="order:2">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAacSDOyOZXwW7t6iBqmOAbHnTUUDDkZkNGBGycCmCC4CSXeZmoutGMx0W0P9pygZYqn19MP3lIV2wgHlpoBIXNHhJA3BJs63xXHggQCp09hmPRG0nb_lNa_tfjkQ6nNZucvWuLNCTNAH1NN-znIDHL2ysfik7CV_JW_Atq8qx-02dCn5QB9-C432IE3yIemAQ7TuT_XP-RVOqLWagib7rWrMMWPZjkmaEpmJeloIH9k3SB3bVPGNztaFzQA8DDdvcPOhfhhYPpea-O" alt="" loading="lazy" />
+        </div>
+        <div class="bl-reveal bl-reveal-delay-1" style="order:1">
+          <p class="bl-eyebrow">Paint Protection Film</p>
+          <h2 class="bl-display" style="font-size:clamp(1.75rem,4vw,2.5rem)">PPF · <span>armadura invisível</span></h2>
+          <p class="bl-lead">Poliuretano de alta performance com regeneração térmica. Proteção da pintura contra detritos, pedras e riscos — aplicação parcial ou veículo completo.</p>
+          <ul class="bl-checklist" style="margin:1.5rem 0">
+            <li><span class="material-symbols-outlined">healing</span>Auto-regeneração de micro-riscos</li>
+            <li><span class="material-symbols-outlined">water_drop</span>Hidrofobia extrema</li>
+            <li><span class="material-symbols-outlined">diamond</span>10 anos de garantia</li>
+          </ul>
+          <a href="ppf.html" class="bl-btn bl-btn--gold">Explorar zonas de cobertura</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bl-section bl-slash" style="background:linear-gradient(135deg,var(--bl-surface) 0%,var(--bl-bg) 100%);text-align:center">
+      <div class="bl-container bl-reveal">
+        <h2 class="bl-display" style="font-size:clamp(1.5rem,4vw,2.25rem)">O melhor para seu veículo<br /><span>está na BlackLine</span></h2>
+        <p class="bl-lead" style="margin:1rem auto 2rem">Fale conosco agora mesmo e receba uma proposta personalizada.</p>
+        <a href="https://wa.me/5511939287036" class="bl-btn bl-btn--gold" target="_blank" rel="noopener">
+          <span class="material-symbols-outlined">chat</span> WhatsApp (11) 93928-7036
+        </a>
+      </div>
+    </section>
   </main>
+
+  <div id="bl-footer"></div>
+  <script src="js/site.js" defer></script>
+  <script src="js/blackline.js" defer></script>
+  <script src="components.js" defer></script>
 </body>
 </html>

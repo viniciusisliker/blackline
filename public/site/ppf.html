@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PPF — BlackLine Studio Automotivo</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/blackline-site.css" />
+</head>
+<body class="bl-grain" data-page="ppf">
+  <div id="bl-navbar"></div>
+  <main class="bl-page">
+    <header class="bl-page-hero bl-page-hero--short" style="text-align:center;align-items:center;justify-content:center">
+      <div class="bl-page-hero__bg">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAacSDOyOZXwW7t6iBqmOAbHnTUUDDkZkNGBGycCmCC4CSXeZmoutGMx0W0P9pygZYqn19MP3lIV2wgHlpoBIXNHhJA3BJs63xXHggQCp09hmPRG0nb_lNa_tfjkQ6nNZucvWuLNCTNAH1NN-znIDHL2ysfik7CV_JW_Atq8qx-02dCn5QB9-C432IE3yIemAQ7TuT_XP-RVOqLWagib7rWrMMWPZjkmaEpmJeloIH9k3SB3bVPGNztaFzQA8DDdvcPOhfhhYPpea-O" alt="" />
+        <div class="bl-page-hero__fade" style="background:linear-gradient(180deg,var(--bl-bg) 0%,rgba(10,10,10,0.7) 50%,var(--bl-bg) 100%)"></div>
+      </div>
+      <div class="bl-container bl-reveal is-visible">
+        <h1 class="bl-display">Paint Protection <span>Film</span></h1>
+        <p class="bl-lead" style="margin-inline:auto">A armadura invisível definitiva. Poliuretano com regeneração térmica e 10 anos de garantia.</p>
+      </div>
+    </header>
+
+    <section class="bl-section">
+      <div class="bl-container">
+        <h2 class="bl-h2 bl-reveal">Tecnologia de defesa</h2>
+        <div class="bl-grid bl-grid--3" style="margin-top:2rem">
+          <article class="bl-card bl-reveal">
+            <span class="material-symbols-outlined bl-feature-icon">healing</span>
+            <h3 class="bl-h3">Regeneração térmica</h3>
+            <p>Micro-riscos desaparecem com calor do sol ou motor — brilho restaurado.</p>
+          </article>
+          <article class="bl-card bl-reveal bl-reveal-delay-1">
+            <span class="material-symbols-outlined bl-feature-icon">shield</span>
+            <h3 class="bl-h3">Resistência a impactos</h3>
+            <p>Absorve pedras, detritos e insetos sem danificar o verniz original.</p>
+          </article>
+          <article class="bl-card bl-reveal bl-reveal-delay-2">
+            <span class="material-symbols-outlined bl-feature-icon">water_drop</span>
+            <h3 class="bl-h3">Hidrofobia extrema</h3>
+            <p>Superfície que repele água e contaminantes — lavagem facilitada.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bl-section bl-slash-rev" style="background:var(--bl-surface-low)">
+      <div class="bl-container bl-split">
+        <div class="bl-reveal">
+          <h2 class="bl-h2">Mapa interativo de cobertura</h2>
+          <p class="bl-lead">Clique nos pontos para ver cada zona de aplicação.</p>
+          <div class="bl-ppf-map bl-reveal" id="bl-ppf-map" style="margin-top:1.5rem">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3CuV3TN-yzh2_CjlP8y0ezKIfLsUaWWCnQTSOUkGDt4tQKoNjgfFEGrjn93SfQbJjkUbYnYPPwcTPycRkFz5SMALFI7U89OZbQV9aXjqj_0RIn1kgZi5W-oubF851sHVBtGokAb2YjJSJ-FqTp1jIk1Hes8UR2T5u8eKrrVnlC1yLczqvBSs4MjQHvQLcLnjK2UNU2unwTykapt2wm8Wek81Vyn_cs5cUqp0biShQycQLBlpdau82O3JiWpPStWQmUvoo6hgTKaVY" alt="" />
+            <button type="button" class="bl-ppf-hotspot" data-zone="1" style="top:28%;left:50%" aria-label="Capô"></button>
+            <button type="button" class="bl-ppf-hotspot" data-zone="2" style="top:42%;left:72%" aria-label="Para-choque"></button>
+            <button type="button" class="bl-ppf-hotspot" data-zone="3" style="top:38%;left:28%" aria-label="Para-lama"></button>
+            <button type="button" class="bl-ppf-hotspot" data-zone="4" style="top:32%;left:22%" aria-label="Retrovisor"></button>
+            <button type="button" class="bl-ppf-hotspot" data-zone="5" style="top:48%;left:38%" aria-label="Porta"></button>
+            <button type="button" class="bl-ppf-hotspot" data-zone="7" style="top:35%;left:65%" aria-label="Farol"></button>
+          </div>
+          <p class="bl-ppf-legend" id="bl-ppf-legend">Toque em uma zona do veículo</p>
+          <ul class="bl-checklist" style="margin-top:1rem">
+            <li><span class="material-symbols-outlined">check_circle</span>Capô, para-choques, retrovisores, faróis</li>
+            <li><span class="material-symbols-outlined">check_circle</span>Aplicação parcial ou veículo completo</li>
+            <li><span class="material-symbols-outlined">check_circle</span>Cortes a laser de precisão</li>
+          </ul>
+        </div>
+        <div class="bl-reveal bl-reveal-delay-1" style="display:flex;flex-direction:column;justify-content:center;text-align:center">
+          <div class="bl-warranty" style="margin:0 auto 1.5rem;width:7rem;height:7rem"><strong style="font-size:2.25rem">10</strong><span>DE<br/>GARANTIA</span></div>
+          <h3 class="bl-display" style="font-size:1.75rem">Carro <span>completo</span></h3>
+          <p style="color:var(--bl-text-muted);margin-top:1rem">Full Wrap — cada painel encapsulado com uniformidade impecável. Ideal para luxo, superesportivos e coleções.</p>
+          <a href="orcamento.html" class="bl-btn bl-btn--gold" style="margin-top:2rem;align-self:center">Proteger meu veículo</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="bl-footer"></div>
+  <script src="js/site.js" defer></script>
+  <script src="js/blackline.js" defer></script>
+  <script src="components.js" defer></script>
+</body>
+</html>

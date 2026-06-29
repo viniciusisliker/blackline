@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sobre Nós - Premium Shield</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "tertiary-fixed": "#ffe16d",
+                "surface-container-high": "#272a2e",
+                "secondary": "#adc7ff",
+                "surface-dim": "#101417",
+                "inverse-on-surface": "#2d3135",
+                "surface-bright": "#36393e",
+                "primary-fixed": "#dde3eb",
+                "on-secondary-container": "#00285b",
+                "on-error": "#690005",
+                "inverse-surface": "#e0e2e8",
+                "on-tertiary-container": "#776300",
+                "surface-container": "#1c2024",
+                "on-tertiary-fixed-variant": "#544600",
+                "on-secondary-fixed-variant": "#004493",
+                "on-tertiary": "#3a3000",
+                "surface-container-highest": "#323539",
+                "outline": "#8e9195",
+                "tertiary": "#ffffff",
+                "error": "#ffb4ab",
+                "secondary-container": "#4a8eff",
+                "primary-container": "#dde3eb",
+                "on-error-container": "#ffdad6",
+                "tertiary-fixed-dim": "#e9c400",
+                "surface": "#101417",
+                "on-surface-variant": "#c5c6cb",
+                "on-secondary": "#002e68",
+                "surface-container-lowest": "#0b0f12",
+                "on-tertiary-fixed": "#221b00",
+                "secondary-fixed": "#d8e2ff",
+                "on-primary-container": "#5f656c",
+                "tertiary-container": "#ffe16d",
+                "background": "#101417",
+                "secondary-fixed-dim": "#adc7ff",
+                "on-surface": "#e0e2e8",
+                "surface-tint": "#c1c7cf",
+                "on-background": "#e0e2e8",
+                "inverse-primary": "#595f66",
+                "on-primary-fixed": "#161c22",
+                "primary-fixed-dim": "#c1c7cf",
+                "surface-variant": "#323539",
+                "on-primary": "#2b3137",
+                "primary": "#ffffff",
+                "on-secondary-fixed": "#001a41",
+                "on-primary-fixed-variant": "#41474e",
+                "outline-variant": "#44474a",
+                "error-container": "#93000a",
+                "surface-container-low": "#181c20"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "margin-desktop": "64px",
+                "container-max": "1280px",
+                "gutter": "24px",
+                "unit": "8px",
+                "margin-mobile": "20px",
+                "section-gap": "120px"
+        },
+        "fontFamily": {
+                "body-md": [
+                        "Inter"
+                ],
+                "display-lg": [
+                        "Hanken Grotesk"
+                ],
+                "headline-lg": [
+                        "Hanken Grotesk"
+                ],
+                "headline-sm": [
+                        "Hanken Grotesk"
+                ],
+                "display-lg-mobile": [
+                        "Hanken Grotesk"
+                ],
+                "label-md": [
+                        "Geist"
+                ],
+                "label-sm": [
+                        "Geist"
+                ],
+                "body-lg": [
+                        "Inter"
+                ],
+                "technical-data": ["Inter"],
+                "label-caps": ["Inter"],
+                "headline-xl": ["Inter"],
+                "headline-lg-mobile": ["Inter"]
+        },
+        "fontSize": {
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "display-lg": [
+                        "64px",
+                        {
+                                "lineHeight": "72px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-sm": [
+                        "20px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "display-lg-mobile": [
+                        "40px",
+                        {
+                                "lineHeight": "48px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "label-md": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.08em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "technical-data": ["14px", { lineHeight: "1.4", letterSpacing: "0.02em", fontWeight: "600" }],
+                "label-caps": ["12px", { lineHeight: "1", letterSpacing: "0.1em", fontWeight: "700" }],
+                "headline-xl": ["48px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "800" }],
+                "headline-lg-mobile": ["28px", { lineHeight: "1.3", fontWeight: "700" }]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .slash-divider {
+            clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+        }
+        .slash-divider-inverse {
+            clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+        }
+        .glass-panel {
+            background: rgba(19, 19, 19, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(77, 71, 50, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/95 dark:bg-background/95 border-b border-outline-variant/30 backdrop-blur-md">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-full">
+<a class="font-display-lg text-headline-lg font-black tracking-tighter text-primary-container dark:text-primary-container" href="#">PREMIUM SHIELD</a>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary-fixed transition-colors hover:bg-secondary-container hover:text-on-secondary-container transition-all duration-300 px-4 py-2 rounded-DEFAULT" href="#">Películas Térmicas</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary-fixed transition-colors hover:bg-secondary-container hover:text-on-secondary-container transition-all duration-300 px-4 py-2 rounded-DEFAULT" href="#">Antivandalismo</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary-fixed transition-colors hover:bg-secondary-container hover:text-on-secondary-container transition-all duration-300 px-4 py-2 rounded-DEFAULT" href="#">PPF</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary-fixed transition-colors hover:bg-secondary-container hover:text-on-secondary-container transition-all duration-300 px-4 py-2 rounded-DEFAULT text-primary-container border-b-2 border-primary-container pb-1" href="#">Sobre Nós</a>
+</div>
+<button class="hidden md:block bg-secondary-container text-on-secondary-container font-label-caps text-label-caps px-6 py-3 rounded-DEFAULT hover:invert transition-all duration-300 active:scale-95 duration-150 ease-in-out">
+                Orçamento Grátis
+            </button>
+<button class="md:hidden text-primary-container">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="flex-grow pt-24 md:pt-32">
+<!-- Hero Section -->
+<section class="relative w-full h-[614px] md:h-[819px] flex items-center px-margin-mobile md:px-margin-desktop overflow-hidden slash-divider">
+<div class="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-luminosity" data-alt="A dramatic, high-contrast, cinematic shot of a luxury sports car in a dark, industrial garage setting. The car's surface gleams perfectly, emphasizing advanced protective coating. Moody lighting with deep blacks and stark industrial gold accents highlight the vehicle's aerodynamic curves. The atmosphere conveys ultimate protection, exclusivity, and technological supremacy." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCEfsbWbmohqSPSyjmvJJk_FCZit97ak-jVO7NJhbi-cXoMxq20Vs5FPCWYaIJ4rhwuJEobSk_iwHZSMIJkocoCV7_iomNyMaMQcSh5ZPpsaFaV0cbHBVnHGqOz-j026K7_XyAwdvIIqUOSTzpI7gdPepDpFdzYOmEH5kYdF0egOYi3g0T0zJ7wZBy9HIInMDp0zDFIwBceII1K2pNtq9gA9MpOLGUsDzf3bqGMtiLhn33hYYvXesGqrhdMGKV1e7YAj872fnlZmrFd')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50"></div>
+<div class="relative z-10 max-w-4xl">
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary-container mb-6 drop-shadow-2xl">ARMADURA<br/>TECNOLÓGICA.</h1>
+<p class="font-body-lg text-body-lg text-secondary-fixed max-w-2xl border-l-4 border-tertiary-container pl-6 py-2">
+                    A Premium Shield redefine os padrões da estética automotiva. Não aplicamos apenas películas; forjamos uma barreira intransponível entre o seu veículo e o mundo.
+                </p>
+</div>
+</section>
+<!-- Expertise Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-4xl text-tertiary-container" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+<h2 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-on-background uppercase tracking-tight">Expertise em Alta Performance</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Nascida da obsessão pela perfeição, a Premium Shield domina a arte da proteção veicular. Nossa equipe técnica opera com precisão cirúrgica, utilizando os materiais mais avançados do mercado global. Cada instalação é um testemunho da nossa dedicação inabalável à qualidade.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-start space-x-3">
+<span class="material-symbols-outlined text-tertiary-container mt-1">verified</span>
+<div>
+<h3 class="font-technical-data text-technical-data text-secondary-fixed uppercase">Materiais de Grau Aeroespacial</h3>
+<p class="text-sm text-on-surface-variant mt-1">Trabalhamos exclusivamente com polímeros e nanotecnologia de ponta, garantindo durabilidade extrema.</p>
+</div>
+</li>
+<li class="flex items-start space-x-3">
+<span class="material-symbols-outlined text-tertiary-container mt-1">handyman</span>
+<div>
+<h3 class="font-technical-data text-technical-data text-secondary-fixed uppercase">Instalação Especializada</h3>
+<p class="text-sm text-on-surface-variant mt-1">Ambientes controlados e técnicas milimétricas para um acabamento invisível e impecável.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="relative h-[500px] rounded-lg overflow-hidden border border-outline-variant/50 shadow-2xl">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Close-up macro shot of a highly skilled technician carefully applying a transparent Paint Protection Film (PPF) onto the curved hood of a matte black exotic supercar. The lighting is focused, casting sharp, dramatic shadows that emphasize the precision of the work. The color palette is strictly high-contrast darks with industrial gold tool accents, conveying a sense of clinical perfection and automotive luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7kEjqxb2u6tr3JLFmqvYM5WTamA3Lh-dJND2MWNtgKOqW5mVF2kaor-NqElhg5puyp-m0j_duC4WD3LHXtUl36ygLCiS1C6Be3nUnAiWuvWFKHwTIJMXK9FUsQPzpK4FBXzJURtghXjBsPyJd_NwoYd4-481DTTzmhqtOeOwjN60BbfX0PdTQjUUHZV5wzbbbTJsgHmg8uMbpf8kCtLdFg3lez3eBhG2Rn73fToyF-PBb_f2X9r7b0EyH_OsyUf_DznjVzQhkQf2z"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background/80 to-transparent"></div>
+</div>
+</div>
+</section>
+<!-- Values Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-dim slash-divider-inverse">
+<div class="max-w-7xl mx-auto">
+<h2 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-center text-primary-container mb-16 uppercase tracking-tight">Nossos Pilares</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Value Card 1 -->
+<div class="glass-panel p-8 rounded-DEFAULT group hover:border-tertiary-container transition-colors duration-300 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-tertiary-container scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
+<span class="material-symbols-outlined text-5xl text-tertiary-container mb-6" style="font-variation-settings: 'FILL' 1;">shield</span>
+<h3 class="font-headline-lg text-headline-lg text-secondary-fixed mb-4">Proteção Absoluta</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Não comprometemos a segurança. Fornecemos uma barreira real contra intempéries, detritos e ameaças urbanas, preservando o valor do seu patrimônio.
+                        </p>
+</div>
+<!-- Value Card 2 -->
+<div class="glass-panel p-8 rounded-DEFAULT group hover:border-tertiary-container transition-colors duration-300 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-tertiary-container scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
+<span class="material-symbols-outlined text-5xl text-tertiary-container mb-6" style="font-variation-settings: 'FILL' 1;">diamond</span>
+<h3 class="font-headline-lg text-headline-lg text-secondary-fixed mb-4">Estética Refinada</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            A proteção não deve ocultar a beleza. Nossas soluções realçam o brilho e as linhas agressivas do design automotivo, entregando um acabamento de showroom permanente.
+                        </p>
+</div>
+<!-- Value Card 3 -->
+<div class="glass-panel p-8 rounded-DEFAULT group hover:border-tertiary-container transition-colors duration-300 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-tertiary-container scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
+<span class="material-symbols-outlined text-5xl text-tertiary-container mb-6" style="font-variation-settings: 'FILL' 1;">architecture</span>
+<h3 class="font-headline-lg text-headline-lg text-secondary-fixed mb-4">Rigor Técnico</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Cada milímetro importa. Nossa abordagem é baseada na precisão de engenharia, garantindo que cada aplicação seja executada com exatidão implacável.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/50">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<h4 class="font-headline-xl text-headline-xl text-primary-container mb-4">PREMIUM SHIELD</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Armadura Tecnológica para o seu veículo.</p>
+</div>
+<div class="col-span-1 md:col-span-2 flex flex-wrap gap-6 items-center md:justify-center">
+<a class="font-label-caps text-label-caps text-primary-container font-bold outline-none underline-offset-4 underline" href="#">Sobre Nós</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors hover:text-primary-fixed-dim transition-all outline-none focus:underline-offset-4 focus:underline" href="#">Serviços</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors hover:text-primary-fixed-dim transition-all outline-none focus:underline-offset-4 focus:underline" href="#">Garantia</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors hover:text-primary-fixed-dim transition-all outline-none focus:underline-offset-4 focus:underline" href="#">Termos de Uso</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors hover:text-primary-fixed-dim transition-all outline-none focus:underline-offset-4 focus:underline" href="#">Privacidade</a>
+</div>
+<div class="col-span-1 md:col-span-1 flex items-end md:justify-end mt-8 md:mt-0">
+<p class="font-label-caps text-label-caps text-on-surface-variant">© 2024 PREMIUM SHIELD AUTO ESTÉTICA. TODOS OS DIREITOS RESERVADOS.</p>
+</div>
+</div>
+</footer>
+</body></html>

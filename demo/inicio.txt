@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PREMIUM SHIELD - Estética Automotiva</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "tertiary-fixed": "#ffe16d",
+                "surface-container-high": "#272a2e",
+                "secondary": "#adc7ff",
+                "surface-dim": "#101417",
+                "inverse-on-surface": "#2d3135",
+                "surface-bright": "#36393e",
+                "primary-fixed": "#dde3eb",
+                "on-secondary-container": "#00285b",
+                "on-error": "#690005",
+                "inverse-surface": "#e0e2e8",
+                "on-tertiary-container": "#776300",
+                "surface-container": "#1c2024",
+                "on-tertiary-fixed-variant": "#544600",
+                "on-secondary-fixed-variant": "#004493",
+                "on-tertiary": "#3a3000",
+                "surface-container-highest": "#323539",
+                "outline": "#8e9195",
+                "tertiary": "#ffffff",
+                "error": "#ffb4ab",
+                "secondary-container": "#4a8eff",
+                "primary-container": "#dde3eb",
+                "on-error-container": "#ffdad6",
+                "tertiary-fixed-dim": "#e9c400",
+                "surface": "#101417",
+                "on-surface-variant": "#c5c6cb",
+                "on-secondary": "#002e68",
+                "surface-container-lowest": "#0b0f12",
+                "on-tertiary-fixed": "#221b00",
+                "secondary-fixed": "#d8e2ff",
+                "on-primary-container": "#5f656c",
+                "tertiary-container": "#ffe16d",
+                "background": "#101417",
+                "secondary-fixed-dim": "#adc7ff",
+                "on-surface": "#e0e2e8",
+                "surface-tint": "#c1c7cf",
+                "on-background": "#e0e2e8",
+                "inverse-primary": "#595f66",
+                "on-primary-fixed": "#161c22",
+                "primary-fixed-dim": "#c1c7cf",
+                "surface-variant": "#323539",
+                "on-primary": "#2b3137",
+                "primary": "#ffffff",
+                "on-secondary-fixed": "#001a41",
+                "on-primary-fixed-variant": "#41474e",
+                "outline-variant": "#44474a",
+                "error-container": "#93000a",
+                "surface-container-low": "#181c20"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "margin-desktop": "64px",
+                "container-max": "1280px",
+                "gutter": "24px",
+                "unit": "8px",
+                "margin-mobile": "20px"
+        },
+        "fontFamily": {
+                "body-md": [
+                        "Inter"
+                ],
+                "display-lg": [
+                        "Hanken Grotesk"
+                ],
+                "headline-lg": [
+                        "Hanken Grotesk"
+                ],
+                "headline-sm": [
+                        "Hanken Grotesk"
+                ],
+                "display-lg-mobile": [
+                        "Hanken Grotesk"
+                ],
+                "label-md": [
+                        "Geist"
+                ],
+                "label-sm": [
+                        "Geist"
+                ],
+                "body-lg": [
+                        "Inter"
+                ]
+        },
+        "fontSize": {
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "display-lg": [
+                        "64px",
+                        {
+                                "lineHeight": "72px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-sm": [
+                        "20px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "display-lg-mobile": [
+                        "40px",
+                        {
+                                "lineHeight": "48px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "label-md": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.08em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        .slash-divider {
+            clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+        }
+        .slash-divider-reverse {
+            clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+        }
+    </style>
+</head>
+<body class="antialiased font-body-md text-body-md">
+<!-- TopNavBar -->
+<nav class="bg-background/95 dark:bg-background/95 fixed top-0 w-full z-50 border-b border-outline-variant/30 backdrop-blur-md">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-full mx-auto">
+<div class="font-display-lg text-headline-lg-mobile md:text-headline-lg font-black tracking-tighter text-secondary dark:text-secondary">
+                PREMIUM SHIELD
+            </div>
+<div class="hidden md:flex space-x-gutter">
+<a class="text-on-surface-variant hover:text-primary-fixed transition-colors font-label-caps text-label-caps hover:bg-secondary-container hover:text-on-secondary-container px-2 py-1 transition-all duration-300" href="#peliculas">Películas Térmicas</a>
+<a class="text-on-surface-variant hover:text-primary-fixed transition-colors font-label-caps text-label-caps hover:bg-secondary-container hover:text-on-secondary-container px-2 py-1 transition-all duration-300" href="#antivandalismo">Antivandalismo</a>
+<a class="text-on-surface-variant hover:text-primary-fixed transition-colors font-label-caps text-label-caps hover:bg-secondary-container hover:text-on-secondary-container px-2 py-1 transition-all duration-300" href="#ppf">PPF</a>
+</div>
+<a class="bg-secondary-container text-on-secondary-container font-technical-data text-technical-data px-4 py-2 hover:bg-secondary transition-all" href="#contato">Orçamento Grátis</a>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="bg-cover bg-center bg-no-repeat w-full h-full opacity-60" data-alt="A cinematic, high-contrast shot of a sleek, black luxury sports car parked in a dark, high-end automotive studio. The car's paint is perfectly polished, reflecting dramatic overhead strip lighting. The mood is exclusive, aggressive, and highly technical. Deep shadows emphasize the car's aerodynamic curves. The overall aesthetic perfectly matches a premium automotive detailing brand." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBb-pNk6Y2ZzyiclGWmcDrdAM4T2F7w1Z7xFmns6FjWnaQCgPwmoGvF_Cc9Wlmo7wzXSmJ_P8U2Zt0am02P-FQQvV6uG6xUKY9URmYLNfyAbyML9MbuAO_iKcTFHTWtnmBVWw4-4uNjg7lt9agzDexocLDreAd8Oa6fsKthrUk5EJMTFmuLDVhO8jTfI2A442DTD5baNRRSTTyKN2QYeTBQo-kqe8jYEk6OWVtzEq_j4E5qwnl9wjzPoJikW53KyvddCL6nfQlZAq-0')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-5xl mx-auto">
+<h1 class="font-display-lg text-headline-xl md:text-display-lg mb-6 uppercase text-secondary">Proteção Máxima <br/><span class="text-secondary-container">para seu Veículo</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">Especialistas em Películas Térmicas, Antivandalismo e PPF de Alta Performance. A armadura tecnológica que o seu carro merece.</p>
+<a class="inline-flex items-center justify-center bg-secondary-container text-on-secondary-container font-technical-data text-technical-data px-8 py-4 hover:bg-secondary transition-all uppercase tracking-wider" href="#contato">
+                Quero um Orçamento
+                <span class="material-symbols-outlined ml-2 text-tertiary-container" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- Películas Térmicas -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low slash-divider relative" id="peliculas">
+<div class="max-w-7xl mx-auto">
+<div class="mb-12">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-2 border-l-4 border-tertiary-container pl-4 text-secondary">Películas térmicas</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Carbon Black -->
+<div class="bg-surface p-8 border-t border-outline-variant/30 hover:bg-surface-container-high transition-colors relative group">
+<div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-secondary-container to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex items-center mb-6">
+<div class="w-24 h-24 rounded-full border-2 border-tertiary-container flex flex-col items-center justify-center mr-6 text-tertiary-container">
+<span class="font-headline-xl text-headline-xl leading-none">7</span>
+<span class="font-label-caps text-label-caps text-center leading-tight">DE<br/>GARANTIA</span>
+</div>
+<div>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg leading-tight uppercase font-light text-secondary">carbon</h3>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg leading-tight uppercase font-black tracking-tighter text-secondary-container">BLACK</h3>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        A Carbon Black é uma de alta performance que garante máxima estabilidade de cor e excelente visibilidade interna.
+                    </p>
+</div>
+<!-- Ceramic Black -->
+<div class="bg-surface p-8 border-t border-secondary-container hover:bg-surface-container-high transition-colors relative">
+<div class="absolute inset-0 border border-white/5 rounded-none pointer-events-none"></div>
+<div class="flex items-center mb-6">
+<div class="w-24 h-24 rounded-full border-2 border-tertiary-container flex flex-col items-center justify-center mr-6 text-tertiary-container">
+<span class="font-headline-xl text-headline-xl leading-none">10</span>
+<span class="font-label-caps text-label-caps text-center leading-tight">DE<br/>GARANTIA</span>
+</div>
+<div>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg leading-tight uppercase font-light text-secondary">Ceramic</h3>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg leading-tight uppercase font-black tracking-tighter text-secondary-container">BLACK</h3>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        A Ceramic black é uma película desenvolvida para máxima rejeição de calor, garantindo conforto térmico e proteção superior.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Antivandalismo -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-background relative overflow-hidden" id="antivandalismo">
+<div class="absolute right-0 top-0 w-1/2 h-full z-0 hidden md:block">
+<div class="bg-cover bg-center w-full h-full opacity-30" data-alt="A dramatic action shot showing a heavy hammer striking a car window treated with security film. The glass shatters but holds perfectly together in a spiderweb pattern, demonstrating extreme impact resistance. The lighting is harsh and industrial, emphasizing strength and security. Dark, high-contrast aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCSfnzZP2z4_mLRArNbMaek1XDKrAR-Z8gTu3pQ_KSavbtP63aItBV4Z7bbP_MYlNbDshGzhZ0ak0rcuAneqxs40PPcwiNFisFzRn1TXxraVIVTT3ZvVI81xzrOs9oixMFmBAiX0tWAOgKqpnBH-jMzYJ2hCa-r-Z9hpcOddIZtl2SXOL4aCZAq0lSV-cSYkYJITxdky-zPG_NC70DfeBOwMZhSCurcMjV969yItgUYUnAfR92-J85Ljg7J7L5i_-9HmoZaPIibNQ4F')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background to-transparent"></div>
+</div>
+<div class="max-w-7xl mx-auto relative z-10 flex">
+<div class="w-full md:w-1/2 pr-0 md:pr-12">
+<div class="w-24 h-24 rounded-full border-2 border-tertiary-container flex flex-col items-center justify-center mb-8 text-tertiary-container bg-surface-container-low/80 backdrop-blur">
+<span class="font-headline-xl text-headline-xl leading-none">10</span>
+<span class="font-label-caps text-label-caps text-center leading-tight">DE<br/>GARANTIA</span>
+</div>
+<h2 class="font-display-lg text-headline-xl md:text-display-lg uppercase mb-2 text-secondary">PELÍCULAS</h2>
+<h2 class="font-display-lg text-headline-xl md:text-display-lg uppercase text-secondary-container mb-8">ANTIVANDALISMO:</h2>
+<div class="space-y-6">
+<div class="border-l-2 border-tertiary-container pl-4">
+<p class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-normal text-on-surface">Ps4 - Suporta <span class="font-bold text-tertiary-container">40 KG</span> de impacto</p>
+</div>
+<div class="border-l-2 border-tertiary-container pl-4">
+<p class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-normal text-on-surface">Ps8 - Suporta <span class="font-bold text-tertiary-container">65 Kg</span> de impacto</p>
+</div>
+</div>
+</div>
+<!-- Mobile Image -->
+<div class="w-full h-64 mt-8 md:hidden relative rounded overflow-hidden border border-outline-variant/30">
+<div class="bg-cover bg-center w-full h-full opacity-50" data-alt="A dramatic action shot showing a heavy hammer striking a car window treated with security film. The glass shatters but holds perfectly together in a spiderweb pattern, demonstrating extreme impact resistance. The lighting is harsh and industrial, emphasizing strength and security. Dark, high-contrast aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuALNWGJthzz9sin7RvUC9-u9rY-N4Y--Qc2AzRqh_DPQe0qCtnlGTqFOLb9T8hipwCQvqA-Mg4FAO4AUqC900YSlm1_dJVgs3lYXl5tj1lZWdxl2T98_nF-rtW7TNS4bcG8HbvWqIN2-HjkrTOot6dRCqySpYx8sCG2MSRseTw7eewVix3db-AJXhKpP1h2DiynG1fef2UwjaEERhmX-vtAtU9ILElaclrK4oxrIccf9vQeAK_4nagQRXaxUIwtzRYvBjojW5VgNcxf')"></div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full py-12 px-margin-mobile md:px-margin-desktop border-t border-outline-variant/50 flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-2">
+<div class="font-headline-xl text-headline-xl text-secondary mb-4 font-black tracking-tighter">
+                    PREMIUM SHIELD
+                </div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 max-w-sm">
+                    A armadura tecnológica definitiva para o seu veículo. Especialistas em estética automotiva de alta performance.
+                </p>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-secondary-container mb-4">Navegação</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors hover:text-primary-fixed-dim focus:outline-none focus:underline-offset-4 focus:underline" href="#">Sobre Nós</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors hover:text-primary-fixed-dim focus:outline-none focus:underline-offset-4 focus:underline" href="#">Serviços</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors hover:text-primary-fixed-dim focus:outline-none focus:underline-offset-4 focus:underline" href="#">Garantia</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-secondary-container mb-4">Legal</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors hover:text-primary-fixed-dim focus:outline-none focus:underline-offset-4 focus:underline" href="#">Termos de Uso</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors hover:text-primary-fixed-dim focus:outline-none focus:underline-offset-4 focus:underline" href="#">Privacidade</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-outline-variant/30 text-center">
+<p class="font-label-caps text-label-caps text-on-surface-variant">© 2024 PREMIUM SHIELD AUTO ESTÉTICA. TODOS OS DIREITOS RESERVADOS.</p>
+</div>
+</footer>
+</body></html>
