@@ -37,4 +37,5 @@ foreach ($dir in $dirs) {
 }
 
 $logo.Dispose()
+node (Join-Path $PSScriptRoot 'sync-favicon-svg.mjs')
 Write-Host 'Favicons generated.'

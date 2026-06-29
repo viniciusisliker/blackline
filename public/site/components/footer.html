@@ -2,13 +2,13 @@
   <div class="bl-footer__cta">
     <div class="bl-footer__cta-inner">
       <div class="bl-footer__cta-text">
-        <span class="bl-footer__cta-eyebrow">Proteção premium</span>
-        <strong>O melhor para seu veículo está na BlackLine</strong>
-        <p>Garantia de até 10 anos · Instalação profissional · São Paulo</p>
+        <p class="bl-footer__cta-eyebrow">Proteção premium</p>
+        <h2 class="bl-footer__cta-title">O melhor para seu veículo<br /><span>está na BlackLine</span></h2>
+        <p class="bl-footer__cta-meta">Garantia de até 10 anos · Instalação profissional · São Paulo</p>
       </div>
       <div class="bl-footer__cta-actions">
         <a href="https://wa.me/5511939287036?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20na%20BlackLine." class="bl-btn bl-btn--gold" target="_blank" rel="noopener">Solicitar orçamento</a>
-        <a href="https://wa.me/5511939287036" class="bl-btn bl-btn--ghost" target="_blank" rel="noopener">
+        <a href="https://wa.me/5511939287036" class="bl-btn bl-btn--ghost bl-btn--ghost-dark" target="_blank" rel="noopener">
           <span class="bl-icon-whatsapp" aria-hidden="true"></span> WhatsApp
         </a>
       </div>
@@ -22,17 +22,17 @@
           <img src="img/logo-blackline.png" alt="BlackLine Studio Automotivo" class="bl-logo-img bl-logo-img--footer" width="200" height="60" />
         </div>
         <p class="bl-footer__tagline">
-          Especialistas em películas térmicas, antivandalismo, PPF e sistemas de proteção para vidros.
+          Especialistas em películas térmicas, antivandalismo, PPF e sistemas de proteção para vidros automotivos.
         </p>
-        <div class="bl-footer__badges">
+        <div class="bl-footer__badges" aria-label="Destaques BlackLine">
           <span class="bl-footer__badge">10 anos PPF</span>
           <span class="bl-footer__badge">Defense 180 kg</span>
           <span class="bl-footer__badge">Ceramic 90% IRR</span>
         </div>
       </div>
 
-      <div class="bl-footer__col">
-        <h4>Serviços</h4>
+      <nav class="bl-footer__col" aria-label="Serviços">
+        <h4 class="bl-footer__col-title">Serviços</h4>
         <ul class="bl-footer__list">
           <li><a href="peliculas.html">Películas Térmicas</a></li>
           <li><a href="antivandalismo.html">Antivandalismo Ps4 / Ps8</a></li>
@@ -40,37 +40,48 @@
           <li><a href="index.html#vidros">Shield &amp; Defense GLASS</a></li>
           <li><a href="galeria.html">Galeria</a></li>
         </ul>
-      </div>
+      </nav>
 
-      <div class="bl-footer__col">
-        <h4>Empresa</h4>
+      <nav class="bl-footer__col" aria-label="Empresa">
+        <h4 class="bl-footer__col-title">Empresa</h4>
         <ul class="bl-footer__list">
           <li><a href="sobre.html">Sobre Nós</a></li>
           <li><a href="garantia.html">Garantia</a></li>
           <li><a href="https://wa.me/5511939287036?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20na%20BlackLine." target="_blank" rel="noopener">Orçamento WhatsApp</a></li>
         </ul>
-      </div>
+      </nav>
 
       <div class="bl-footer__col bl-footer__contact">
-        <h4>Contato</h4>
-        <ul class="bl-footer__list">
+        <h4 class="bl-footer__col-title">Contato</h4>
+        <ul class="bl-footer__list bl-footer__list--contact">
           <li>
             <a href="https://wa.me/5511939287036" target="_blank" rel="noopener" class="bl-footer__contact-link">
               <span class="bl-icon-whatsapp" aria-hidden="true"></span>
-              (11) 93928-7036
+              <span class="bl-footer__contact-body">
+                <span class="bl-footer__contact-label">WhatsApp</span>
+                <span class="bl-footer__contact-value">(11) 93928-7036</span>
+              </span>
             </a>
           </li>
           <li>
             <a href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Engenheiro+Caetano+%C3%81lvares,+3004,+S%C3%A3o+Paulo+-+SP" target="_blank" rel="noopener" class="bl-footer__contact-link">
-              <span class="material-symbols-outlined">location_on</span>
-              Av. Eng. Caetano Álvares, 3004<br />São Paulo — SP
+              <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+              <span class="bl-footer__contact-body">
+                <span class="bl-footer__contact-label">Studio</span>
+                <span class="bl-footer__contact-value">Av. Eng. Caetano Álvares, 3004</span>
+                <span class="bl-footer__contact-value bl-footer__contact-value--sub">São Paulo — SP</span>
+              </span>
             </a>
           </li>
           <li>
-            <span class="bl-footer__contact-link bl-footer__contact-link--static">
-              <span class="material-symbols-outlined">schedule</span>
-              Seg–Sex 8h–18h · Sáb sob agendamento
-            </span>
+            <div class="bl-footer__contact-link bl-footer__contact-link--static">
+              <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+              <span class="bl-footer__contact-body">
+                <span class="bl-footer__contact-label">Horário</span>
+                <span class="bl-footer__contact-value">Seg–Sex · 8h às 18h</span>
+                <span class="bl-footer__contact-value bl-footer__contact-value--sub">Sábado sob agendamento</span>
+              </span>
+            </div>
           </li>
         </ul>
       </div>
@@ -78,9 +89,9 @@
   </div>
 
   <div class="bl-footer__bar">
-    <p class="bl-footer__copy">© 2026 BlackLine Studio Automotivo. Todos os direitos reservados.</p>
+    <p class="bl-footer__copy">© 2026 BlackLine Studio Automotivo · Todos os direitos reservados</p>
     <button type="button" class="bl-footer__top" id="bl-back-top" aria-label="Voltar ao topo">
-      <span class="material-symbols-outlined">keyboard_arrow_up</span>
+      <span class="material-symbols-outlined" aria-hidden="true">keyboard_arrow_up</span>
       Topo
     </button>
   </div>
