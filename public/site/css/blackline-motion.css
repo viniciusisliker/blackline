@@ -1,0 +1,368 @@
+/* ═══ BlackLine Motion — animações automotivas premium ═══ */
+
+/* Scroll progress — linha estilo tacômetro */
+.bl-scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  z-index: 200;
+  background: linear-gradient(90deg, var(--bl-gold-dim), var(--bl-gold-bright), #fff);
+  box-shadow: 0 0 12px rgba(232, 197, 71, 0.6);
+  pointer-events: none;
+  transition: width 0.08s linear;
+}
+
+/* Preloader RPM */
+.bl-preloader__dial {
+  text-align: center;
+  margin-top: 1.25rem;
+}
+.bl-preloader__rpm {
+  font-family: var(--bl-display);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--bl-gold-bright);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.05em;
+}
+.bl-preloader__rpm small {
+  display: block;
+  font-size: 0.55rem;
+  letter-spacing: 0.35em;
+  color: var(--bl-text-muted);
+  margin-top: 0.25rem;
+}
+
+/* Hero FX layers */
+.bl-hero__fx {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+.bl-speed-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.55;
+}
+.bl-hero__scan {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(232,197,71,0.5), transparent);
+  box-shadow: 0 0 20px rgba(232,197,71,0.3);
+  animation: blScanDown 4s ease-in-out infinite;
+  opacity: 0.6;
+}
+@keyframes blScanDown {
+  0% { top: 0%; opacity: 0; }
+  10% { opacity: 0.7; }
+  90% { opacity: 0.7; }
+  100% { top: 100%; opacity: 0; }
+}
+.bl-hero__headlight {
+  position: absolute;
+  top: 35%;
+  width: 40%;
+  height: 60%;
+  opacity: 0;
+  animation: blHeadlightPulse 5s ease-in-out infinite;
+}
+.bl-hero__headlight--l {
+  left: 5%;
+  background: radial-gradient(ellipse at 30% 50%, rgba(255,248,220,0.12) 0%, transparent 65%);
+}
+.bl-hero__headlight--r {
+  right: 5%;
+  background: radial-gradient(ellipse at 70% 50%, rgba(255,248,220,0.1) 0%, transparent 65%);
+  animation-delay: 0.8s;
+}
+@keyframes blHeadlightPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.85; }
+}
+.bl-hero__hud {
+  position: absolute;
+  inset: var(--bl-gutter);
+  border: 1px solid transparent;
+  opacity: 0;
+  animation: blHudIn 1.2s ease 0.8s forwards;
+}
+.bl-hero__hud::before,
+.bl-hero__hud::after {
+  content: '';
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  border-color: rgba(200, 168, 78, 0.4);
+  border-style: solid;
+}
+.bl-hero__hud::before {
+  top: 0; left: 0;
+  border-width: 1px 0 0 1px;
+}
+.bl-hero__hud::after {
+  bottom: 0; right: 0;
+  border-width: 0 1px 1px 0;
+}
+@keyframes blHudIn {
+  to { opacity: 1; }
+}
+.bl-hero__spotlight {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle 280px at var(--mx, 50%) var(--my, 50%), rgba(232,197,71,0.07), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.bl-hero:hover .bl-hero__spotlight { opacity: 1; }
+
+/* Chrome / gold shimmer em títulos */
+.bl-display span,
+.bl-display em {
+  background: linear-gradient(
+    105deg,
+    var(--bl-gold-dim) 0%,
+    #fff8e0 25%,
+    var(--bl-gold-bright) 50%,
+    #fff8e0 75%,
+    var(--bl-gold) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: blChromeFlow 6s linear infinite;
+}
+@keyframes blChromeFlow {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Card shine + tilt */
+.bl-card--shine {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.bl-card--shine::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.06) 48%,
+    rgba(232, 197, 71, 0.12) 50%,
+    rgba(255, 255, 255, 0.06) 52%,
+    transparent 60%
+  );
+  transform: translateX(-120%) skewX(-18deg);
+  transition: none;
+  pointer-events: none;
+}
+.bl-card--shine:hover::after {
+  animation: blCardGlint 0.75s ease forwards;
+}
+@keyframes blCardGlint {
+  to { transform: translateX(120%) skewX(-18deg); }
+}
+
+/* Stats — gauge ring */
+.bl-stat--gauge {
+  position: relative;
+}
+.bl-stat--gauge::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(
+    from 225deg,
+    var(--bl-gold) 0deg,
+    var(--bl-gold-bright) var(--gauge-deg, 0deg),
+    transparent var(--gauge-deg, 0deg)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.bl-stat--gauge.is-gauged::before { opacity: 1; }
+.bl-stat strong {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.bl-stat--gauge.is-gauged strong {
+  animation: blStatPop 0.5s ease;
+}
+@keyframes blStatPop {
+  0% { transform: scale(0.7); }
+  70% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+/* Botão magnético + traço de velocidade */
+.bl-btn--magnetic {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s cubic-bezier(0.34, 1.2, 0.64, 1), box-shadow 0.2s;
+}
+.bl-btn--magnetic::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+  transform: translateX(-100%);
+}
+.bl-btn--magnetic:hover::before {
+  animation: blBtnSweep 0.5s ease;
+}
+@keyframes blBtnSweep {
+  to { transform: translateX(100%); }
+}
+
+/* Warranty badge — pulso escudo */
+.bl-warranty--pulse strong {
+  animation: blShieldPulse 3s ease-in-out infinite;
+}
+@keyframes blShieldPulse {
+  0%, 100% { text-shadow: 0 0 8px rgba(232,197,71,0.3); }
+  50% { text-shadow: 0 0 20px rgba(232,197,71,0.7); }
+}
+
+/* Impact shockwave */
+.bl-shockwave-wrap { position: relative; }
+.bl-shockwave {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: 4rem;
+  height: 4rem;
+  margin: -2rem 0 0 -2rem;
+  border: 2px solid var(--bl-gold);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+}
+.bl-shockwave.is-active {
+  animation: blShock 1s ease-out forwards;
+}
+@keyframes blShock {
+  0% { transform: scale(0.3); opacity: 0.9; }
+  100% { transform: scale(4); opacity: 0; }
+}
+
+/* PPF healing ripple */
+.bl-heal-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(232, 197, 71, 0.5);
+  pointer-events: none;
+  animation: blHeal 1.2s ease-out forwards;
+}
+@keyframes blHeal {
+  0% { transform: scale(0.5); opacity: 0.8; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+/* Reveal variants */
+.bl-reveal--left {
+  transform: translateX(-40px);
+}
+.bl-reveal--right {
+  transform: translateX(40px);
+}
+.bl-reveal--scale {
+  transform: scale(0.92);
+}
+.bl-reveal--left.is-visible,
+.bl-reveal--right.is-visible,
+.bl-reveal--scale.is-visible {
+  transform: translate(0) scale(1);
+}
+
+/* Split media — zoom cinematográfico */
+.bl-split__media--cinema {
+  overflow: hidden;
+}
+.bl-split__media--cinema img {
+  transition: transform 8s ease-out;
+}
+.bl-split__media--cinema.is-visible img {
+  transform: scale(1.06);
+}
+
+/* Page hero — faixa de velocidade */
+.bl-page-hero__streak {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--bl-gold), transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.bl-page-hero.is-lit .bl-page-hero__streak {
+  transform: scaleX(1);
+}
+
+/* Heat shimmer */
+.bl-heat-compare.is-hot {
+  animation: blHeatPulse 0.6s ease;
+}
+@keyframes blHeatPulse {
+  0%, 100% { box-shadow: none; }
+  50% { box-shadow: 0 0 30px rgba(255, 120, 50, 0.15); }
+}
+
+/* Tire tracks decor */
+.bl-tire-tracks {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4rem;
+  opacity: 0.04;
+  background: repeating-linear-gradient(
+    -12deg,
+    transparent,
+    transparent 8px,
+    rgba(255,255,255,0.3) 8px,
+    rgba(255,255,255,0.3) 10px
+  );
+  mask-image: linear-gradient(transparent, black);
+}
+
+/* Stagger children */
+[data-stagger] > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+[data-stagger].is-staggered > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+[data-stagger].is-staggered > *:nth-child(1) { transition-delay: 0.05s; }
+[data-stagger].is-staggered > *:nth-child(2) { transition-delay: 0.12s; }
+[data-stagger].is-staggered > *:nth-child(3) { transition-delay: 0.19s; }
+[data-stagger].is-staggered > *:nth-child(4) { transition-delay: 0.26s; }
+[data-stagger].is-staggered > *:nth-child(5) { transition-delay: 0.33s; }
+[data-stagger].is-staggered > *:nth-child(6) { transition-delay: 0.4s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .bl-display span, .bl-display em { animation: none; -webkit-text-fill-color: var(--bl-gold-bright); }
+  .bl-hero__scan, .bl-hero__headlight, .bl-speed-canvas { display: none; }
+  .bl-card--shine::after { display: none; }
+  .bl-scroll-progress { display: none; }
+  [data-stagger] > * { opacity: 1; transform: none; }
+}

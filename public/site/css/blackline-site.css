@@ -327,7 +327,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 .bl-hero__content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   padding: 2rem var(--bl-gutter) 4rem;
   max-width: var(--bl-max);
   margin: 0 auto;
@@ -385,8 +385,10 @@ button { font-family: inherit; cursor: pointer; }
 }
 .bl-card:hover {
   border-color: var(--bl-border-gold);
-  transform: translateY(-2px);
   box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+}
+.bl-card:not(.bl-card--shine):hover {
+  transform: translateY(-2px);
 }
 .bl-card:hover::before { opacity: 1; }
 .bl-card p { margin: 0; font-size: 0.9rem; color: var(--bl-text-muted); }

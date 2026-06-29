@@ -8,11 +8,15 @@
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/blackline-site.css" />
+  <link rel="stylesheet" href="css/blackline-motion.css" />
 </head>
 <body class="bl-grain" data-page="home">
   <div class="bl-preloader" id="bl-preloader" aria-hidden="true">
     <div>
       <img src="img/favicon.svg" alt="" class="bl-preloader__shield" width="64" height="64" />
+      <div class="bl-preloader__dial">
+        <div class="bl-preloader__rpm"><span id="bl-rpm">0</span><small>RPM</small></div>
+      </div>
       <div class="bl-preloader__bar"><span></span></div>
     </div>
   </div>
@@ -20,10 +24,19 @@
   <div id="bl-navbar"></div>
 
   <main class="bl-page">
-    <section class="bl-hero" data-parallax>
+    <section class="bl-hero" data-parallax data-spotlight>
       <div class="bl-hero__media">
         <div class="bl-hero__media-bg" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuBb-pNk6Y2ZzyiclGWmcDrdAM4T2F7w1Z7xFmns6FjWnaQCgPwmoGvF_Cc9Wlmo7wzXSmJ_P8U2Zt0am02P-FQQvV6uG6xUKY9URmYLNfyAbyML9MbuAO_iKcTFHTWtnmBVWw4-4uNjg7lt9agzDexocLDreAd8Oa6fsKthrUk5EJMTFmuLDVhO8jTfI2A442DTD5baNRRSTTyKN2QYeTBQo-kqe8jYEk6OWVtzEq_j4E5qwnl9wjzPoJikW53KyvddCL6nfQlZAq-0')"></div>
         <div class="bl-hero__overlay"></div>
+      </div>
+      <div class="bl-hero__fx" aria-hidden="true">
+        <canvas class="bl-speed-canvas"></canvas>
+        <div class="bl-hero__scan"></div>
+        <div class="bl-hero__headlight bl-hero__headlight--l"></div>
+        <div class="bl-hero__headlight bl-hero__headlight--r"></div>
+        <div class="bl-hero__hud"></div>
+        <div class="bl-hero__spotlight"></div>
+        <div class="bl-tire-tracks"></div>
       </div>
       <div class="bl-hero__content bl-reveal is-visible">
         <p class="bl-eyebrow">Studio Automotivo · São Paulo</p>
@@ -52,7 +65,7 @@
       <div class="bl-container">
         <h2 class="bl-h2 bl-reveal">Películas térmicas</h2>
         <p class="bl-lead bl-reveal bl-reveal-delay-1" style="margin-bottom:2.5rem">Conforto térmico e estética agressiva em preto profundo.</p>
-        <div class="bl-grid bl-grid--2">
+        <div class="bl-grid bl-grid--2" data-stagger>
           <article class="bl-card bl-reveal">
             <div style="display:flex;gap:1.25rem;align-items:center;margin-bottom:1rem">
               <div class="bl-warranty"><strong>7</strong><span>DE<br/>GARANTIA</span></div>
@@ -76,7 +89,7 @@
       <div class="bl-container">
         <h2 class="bl-h2 bl-reveal">Sistemas de proteção · Vidros</h2>
         <p class="bl-lead bl-reveal bl-reveal-delay-1" style="margin-bottom:2.5rem">Reforço estrutural exclusivo BlackLine para integridade do vidro em impactos.</p>
-        <div class="bl-grid bl-grid--2">
+        <div class="bl-grid bl-grid--2" data-stagger>
           <article class="bl-card bl-reveal">
             <span style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--bl-gold);display:block;margin-bottom:0.5rem">7 anos · Shield Glass Plus</span>
             <h3 class="bl-h3">Shield GLASS</h3>
@@ -150,6 +163,7 @@
   <div id="bl-footer"></div>
   <script src="js/site.js" defer></script>
   <script src="js/blackline.js" defer></script>
+  <script src="js/blackline-motion.js" defer></script>
   <script src="components.js" defer></script>
 </body>
 </html>
