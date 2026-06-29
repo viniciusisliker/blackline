@@ -44,6 +44,13 @@
         { icon: 'description', text: 'Documentada' },
       ],
     },
+    portal: {
+      label: 'Portal do Cliente',
+      chips: [
+        { icon: 'verified', text: 'Garantia' },
+        { icon: 'search', text: 'Consulta por placa' },
+      ],
+    },
     galeria: {
       label: 'Galeria',
       chips: [
