@@ -1,5 +1,7 @@
 (function () {
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const coarse = window.matchMedia('(pointer: coarse)').matches;
+  const narrow = window.matchMedia('(max-width: 767px)').matches;
 
   function injectScrollProgress() {
     if (document.querySelector('.bl-scroll-progress')) return;
@@ -33,7 +35,7 @@
 
   function initSpeedCanvas() {
     const canvas = document.querySelector('.bl-speed-canvas');
-    if (!canvas || reduced) return;
+    if (!canvas || reduced || narrow) return;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
     const parent = canvas.parentElement;
@@ -102,7 +104,7 @@
   function initCardEffects() {
     document.querySelectorAll('.bl-card, .bl-glass').forEach((card) => {
       card.classList.add('bl-card--shine');
-      if (reduced) return;
+      if (reduced || coarse) return;
       card.addEventListener('mousemove', (e) => {
         const r = card.getBoundingClientRect();
         const x = (e.clientX - r.left) / r.width - 0.5;
@@ -116,7 +118,7 @@
   }
 
   function initMagneticButtons() {
-    if (reduced) return;
+    if (reduced || coarse) return;
     document.querySelectorAll('.bl-btn--gold, .bl-btn--magnetic').forEach((btn) => {
       btn.classList.add('bl-btn--magnetic');
       btn.addEventListener('mousemove', (e) => {

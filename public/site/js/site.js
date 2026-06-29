@@ -1,5 +1,6 @@
 (function () {
   let navInitialized = false;
+  let mobileBar = null;
 
   function setNavOpen(open) {
     const drawer = document.getElementById('bl-nav-drawer');
@@ -9,6 +10,21 @@
     drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     document.body.classList.toggle('bl-nav-open', open);
+    mobileBar?.classList.toggle('is-hidden', open);
+
+    if (open) {
+      document.body.dataset.navScrollY = String(window.scrollY);
+      document.body.style.top = `-${window.scrollY}px`;
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+    } else {
+      const y = parseInt(document.body.dataset.navScrollY || '0', 10);
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      delete document.body.dataset.navScrollY;
+      window.scrollTo(0, y);
+    }
   }
 
   function initMobileNav() {
@@ -30,6 +46,10 @@
     return true;
   }
 
-  window.BlackLineSite = { initMobileNav };
+  function registerMobileBar(bar) {
+    mobileBar = bar;
+  }
+
+  window.BlackLineSite = { initMobileNav, registerMobileBar };
   document.addEventListener('DOMContentLoaded', initMobileNav);
 })();

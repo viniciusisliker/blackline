@@ -38,6 +38,7 @@
   function initParallax() {
     const hero = document.querySelector('[data-parallax]');
     if (!hero || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (window.matchMedia('(max-width: 767px)').matches) return;
     const bg = hero.querySelector('.bl-hero__media-bg');
     if (!bg) return;
     window.addEventListener(

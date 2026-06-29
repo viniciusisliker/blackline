@@ -1,43 +1,86 @@
-<header class="bl-nav">
+<header class="bl-nav" id="bl-nav">
+  <div class="bl-nav__accent" aria-hidden="true"></div>
   <div class="bl-nav__bar">
-    <a href="index.html" class="bl-nav__brand" aria-label="BlackLine — início">
-      <img src="img/favicon.svg" alt="" width="32" height="32" />
-      <span class="bl-nav__brand-text">
-        <span class="bl-nav__name">BlackLine</span>
-        <span class="bl-nav__tag">Studio Automotivo</span>
-      </span>
+    <a href="index.html" class="bl-nav__brand" aria-label="BlackLine Studio Automotivo — início">
+      <img src="img/logo-blackline.png" alt="BlackLine Studio Automotivo" class="bl-logo-img bl-logo-img--nav" width="160" height="48" />
     </a>
 
     <nav class="bl-nav__links" aria-label="Menu principal">
-      <a class="bl-nav__link nav-link" href="index.html" data-page="home">Início</a>
-      <a class="bl-nav__link nav-link" href="peliculas.html" data-page="peliculas">Películas</a>
-      <a class="bl-nav__link nav-link" href="antivandalismo.html" data-page="antivandalismo">Antivandalismo</a>
-      <a class="bl-nav__link nav-link" href="ppf.html" data-page="ppf">PPF</a>
-      <a class="bl-nav__link nav-link" href="sobre.html" data-page="sobre">Sobre</a>
+      <a class="bl-nav__link nav-link" href="index.html" data-page="home">
+        <span class="material-symbols-outlined bl-nav__link-icon" aria-hidden="true">home</span>
+        <span>Início</span>
+        <span class="bl-nav__indicator" aria-hidden="true"></span>
+      </a>
+      <a class="bl-nav__link nav-link" href="peliculas.html" data-page="peliculas">
+        <span class="material-symbols-outlined bl-nav__link-icon" aria-hidden="true">thermostat</span>
+        <span>Películas</span>
+        <span class="bl-nav__indicator" aria-hidden="true"></span>
+      </a>
+      <a class="bl-nav__link nav-link" href="antivandalismo.html" data-page="antivandalismo">
+        <span class="material-symbols-outlined bl-nav__link-icon" aria-hidden="true">shield</span>
+        <span>Antivandalismo</span>
+        <span class="bl-nav__indicator" aria-hidden="true"></span>
+      </a>
+      <a class="bl-nav__link nav-link" href="ppf.html" data-page="ppf">
+        <span class="material-symbols-outlined bl-nav__link-icon" aria-hidden="true">layers</span>
+        <span>PPF</span>
+        <span class="bl-nav__indicator" aria-hidden="true"></span>
+      </a>
+      <a class="bl-nav__link nav-link" href="sobre.html" data-page="sobre">
+        <span class="material-symbols-outlined bl-nav__link-icon" aria-hidden="true">apartment</span>
+        <span>Sobre</span>
+        <span class="bl-nav__indicator" aria-hidden="true"></span>
+      </a>
     </nav>
 
     <div class="bl-nav__utils">
-      <a href="orcamento.html" class="bl-btn bl-btn--gold bl-nav__hub">Orçamento</a>
-      <button type="button" class="bl-nav__toggle" id="bl-nav-toggle" aria-expanded="false" aria-controls="bl-nav-drawer" aria-label="Menu">
-        <span class="material-symbols-outlined">menu</span>
+      <a href="https://wa.me/5511939287036" class="bl-nav__icon-btn" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
+        <span class="material-symbols-outlined">chat</span>
+      </a>
+      <a href="/blackline/login" class="bl-nav__hub-link" title="Hub Equipe">Hub</a>
+      <a href="orcamento.html" class="bl-btn bl-btn--gold bl-nav__cta nav-link" data-page="orcamento">Orçamento</a>
+      <button type="button" class="bl-nav__toggle" id="bl-nav-toggle" aria-expanded="false" aria-controls="bl-nav-drawer" aria-label="Abrir menu">
+        <span class="bl-nav__toggle-bar" aria-hidden="true"></span>
+        <span class="bl-nav__toggle-bar" aria-hidden="true"></span>
+        <span class="bl-nav__toggle-bar" aria-hidden="true"></span>
       </button>
     </div>
   </div>
 
   <div class="bl-nav__drawer" id="bl-nav-drawer" aria-hidden="true">
-    <button type="button" class="bl-nav__backdrop" id="bl-nav-backdrop" aria-label="Fechar"></button>
-    <div class="bl-nav__panel" id="bl-nav-panel">
-      <div class="bl-nav__panel-head">
-        <span>Menu</span>
-        <button type="button" id="bl-nav-close" aria-label="Fechar"><span class="material-symbols-outlined">close</span></button>
+    <button type="button" class="bl-nav__backdrop" id="bl-nav-backdrop" aria-label="Fechar menu"></button>
+    <div class="bl-nav__panel" id="bl-nav-panel" role="dialog" aria-modal="true" aria-label="Menu de navegação">
+      <div class="bl-nav__panel-brand">
+        <img src="img/logo-blackline.png" alt="BlackLine Studio Automotivo" class="bl-logo-img bl-logo-img--panel" width="180" height="54" />
+        <button type="button" id="bl-nav-close" class="bl-nav__panel-close" aria-label="Fechar">
+          <span class="material-symbols-outlined">close</span>
+        </button>
       </div>
-      <a class="bl-nav__link nav-link" href="index.html" data-page="home">Início</a>
-      <a class="bl-nav__link nav-link" href="peliculas.html" data-page="peliculas">Películas Térmicas</a>
-      <a class="bl-nav__link nav-link" href="antivandalismo.html" data-page="antivandalismo">Antivandalismo</a>
-      <a class="bl-nav__link nav-link" href="ppf.html" data-page="ppf">PPF</a>
-      <a class="bl-nav__link nav-link" href="sobre.html" data-page="sobre">Sobre Nós</a>
-      <a href="orcamento.html" class="bl-btn bl-btn--gold" style="margin-top:0.75rem">Orçamento Grátis</a>
-      <a href="/blackline/login" class="bl-btn bl-btn--ghost" style="margin-top:0.5rem">Hub Equipe</a>
+
+      <nav class="bl-nav__panel-nav" aria-label="Páginas">
+        <a class="bl-nav__panel-link nav-link" href="index.html" data-page="home">
+          <span class="material-symbols-outlined">home</span> Início
+        </a>
+        <a class="bl-nav__panel-link nav-link" href="peliculas.html" data-page="peliculas">
+          <span class="material-symbols-outlined">thermostat</span> Películas Térmicas
+        </a>
+        <a class="bl-nav__panel-link nav-link" href="antivandalismo.html" data-page="antivandalismo">
+          <span class="material-symbols-outlined">shield</span> Antivandalismo
+        </a>
+        <a class="bl-nav__panel-link nav-link" href="ppf.html" data-page="ppf">
+          <span class="material-symbols-outlined">layers</span> PPF
+        </a>
+        <a class="bl-nav__panel-link nav-link" href="sobre.html" data-page="sobre">
+          <span class="material-symbols-outlined">apartment</span> Sobre Nós
+        </a>
+      </nav>
+
+      <div class="bl-nav__panel-foot">
+        <a href="orcamento.html" class="bl-btn bl-btn--gold nav-link" data-page="orcamento" style="width:100%">Orçamento grátis</a>
+        <a href="https://wa.me/5511939287036" class="bl-nav__panel-wa" target="_blank" rel="noopener">
+          <span class="material-symbols-outlined">call</span> (11) 93928-7036
+        </a>
+      </div>
     </div>
   </div>
 </header>

@@ -3,17 +3,18 @@ interface BlackLineLogoProps {
   showSubtitle?: boolean;
 }
 
-const sizes = { sm: 28, md: 36, lg: 48 };
+const heights = { sm: 36, md: 48, lg: 64 };
 
-export function BlackLineLogo({ size = 'md', showSubtitle = false }: BlackLineLogoProps) {
-  const px = sizes[size];
+export function BlackLineLogo({ size = 'md' }: BlackLineLogoProps) {
+  const h = heights[size];
   return (
     <div className={`bl-logo bl-logo--${size}`}>
-      <img src={`${import.meta.env.BASE_URL}img/favicon.svg`} alt="" width={px} height={px} className="bl-logo__mark" />
-      <div className="bl-logo__text">
-        <span className="bl-logo__name">BlackLine</span>
-        {showSubtitle ? <span className="bl-logo__sub">Studio Automotivo</span> : null}
-      </div>
+      <img
+        src={`${import.meta.env.BASE_URL}img/logo-blackline.png`}
+        alt="BlackLine Studio Automotivo"
+        className="bl-logo__img"
+        height={h}
+      />
     </div>
   );
 }

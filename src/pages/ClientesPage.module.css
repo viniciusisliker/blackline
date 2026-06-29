@@ -19,7 +19,7 @@
   border-radius: 50%;
   flex-shrink: 0;
   background: linear-gradient(135deg, var(--bl-gold), #6b5420);
-  color: #0a0a0a;
+  color: var(--bl-blue);
   display: flex;
   align-items: center;
   justify-content: center;

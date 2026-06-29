@@ -8,7 +8,7 @@
   position: sticky;
   top: 0;
   z-index: 40;
-  background: rgba(10, 10, 10, 0.94);
+  background: rgba(10, 22, 40, 0.94);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(14px);
 }
@@ -31,7 +31,7 @@
 }
 
 .brandBlock:hover {
-  background: rgba(200, 168, 78, 0.06);
+  background: rgba(59, 130, 246, 0.08);
 }
 
 .menuBtn {
@@ -76,21 +76,21 @@
   border-radius: 8px;
   font-size: 0.8125rem;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--bl-silver);
   white-space: nowrap;
   text-decoration: none;
   transition: background 0.2s, color 0.2s;
 }
 
 .hubNavLink:hover {
-  background: rgba(200, 168, 78, 0.1);
+  background: var(--bl-accent-blue-glow, rgba(59, 130, 246, 0.12));
   color: var(--bl-gold-bright);
 }
 
 .hubNavLinkActive {
-  background: rgba(200, 168, 78, 0.14);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.14), rgba(201, 168, 78, 0.12));
   color: var(--bl-gold-bright);
-  border: 1px solid rgba(200, 168, 78, 0.25);
+  border: 1px solid rgba(59, 130, 246, 0.28);
 }
 
 .hubNavIcon {
@@ -113,7 +113,7 @@
 
 .utilityLink:hover {
   color: var(--bl-gold);
-  background: rgba(200, 168, 78, 0.08);
+  background: rgba(59, 130, 246, 0.1);
 }
 
 .profileBtn {
@@ -132,7 +132,7 @@
   height: 1.75rem;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--bl-gold), #8a6f2e);
-  color: #0a0a0a;
+  color: var(--bl-blue);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -179,7 +179,7 @@
 .mobileBackdrop {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(7, 16, 24, 0.6);
   border: none;
   cursor: pointer;
 }
