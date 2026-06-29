@@ -1,16 +1,60 @@
 import { PageHeader } from '../components/PageHeader';
+import { HUB_CREDENTIALS, FORMSPREE_ID } from '../lib/authConfig';
+import styles from './ConfiguracoesPage.module.css';
 
 export function ConfiguracoesPage() {
+  function clearHubData() {
+    if (!window.confirm('Limpar clientes e agenda salvos neste navegador?')) return;
+    localStorage.removeItem('blackline-hub-clients');
+    localStorage.removeItem('blackline-hub-agenda');
+    window.location.reload();
+  }
+
   return (
     <div>
       <PageHeader
         badge="Sistema"
         title="Configurações"
-        subtitle="Preferências do Hub — modo demonstração."
+        subtitle="Variáveis de ambiente e dados locais do Hub."
       />
-      <div className="placeholder-card">
-        <span className="material-symbols-outlined placeholder-card__icon">settings</span>
-        <p>Configurações de equipe, notificações e integrações em desenvolvimento.</p>
+
+      <div className={styles.grid}>
+        <article className={styles.card}>
+          <h2 className={styles.cardTitle}>
+            <span className="material-symbols-outlined">lock</span>
+            Acesso Hub
+          </h2>
+          <p>
+            Usuário configurado: <strong>{HUB_CREDENTIALS.user}</strong>
+          </p>
+          <p className={styles.muted}>
+            Defina <code>VITE_HUB_USER</code> e <code>VITE_HUB_PASSWORD</code> no arquivo <code>.env</code> para produção.
+          </p>
+        </article>
+
+        <article className={styles.card}>
+          <h2 className={styles.cardTitle}>
+            <span className="material-symbols-outlined">mail</span>
+            Formspree (orçamento)
+          </h2>
+          <p>
+            ID: <strong>{FORMSPREE_ID || 'não configurado'}</strong>
+          </p>
+          <p className={styles.muted}>
+            Adicione <code>VITE_FORMSPREE_ID</code> e a meta <code>blackline-formspree</code> na página de orçamento para envio por e-mail além do WhatsApp.
+          </p>
+        </article>
+
+        <article className={styles.card}>
+          <h2 className={styles.cardTitle}>
+            <span className="material-symbols-outlined">database</span>
+            Dados locais
+          </h2>
+          <p className={styles.muted}>Clientes e agenda ficam no localStorage deste navegador.</p>
+          <button type="button" className="btn-ghost" onClick={clearHubData}>
+            Restaurar dados demo
+          </button>
+        </article>
       </div>
     </div>
   );

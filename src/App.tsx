@@ -10,6 +10,8 @@ import { ClientesPage } from './pages/ClientesPage';
 import { AgendaPage } from './pages/AgendaPage';
 import { ConfiguracoesPage } from './pages/ConfiguracoesPage';
 import { PerfilPage } from './pages/PerfilPage';
+import { PortalLoginPage } from './pages/PortalLoginPage';
+import { PortalDashboardPage } from './pages/PortalDashboardPage';
 
 export default function App() {
   return (
@@ -17,6 +19,8 @@ export default function App() {
       <BrowserRouter basename="/blackline">
         <Routes>
           <Route path="/" element={<SiteRedirectPage />} />
+          <Route path="/portal" element={<PortalLoginPage />} />
+          <Route path="/portal/dashboard" element={<PortalDashboardPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route element={<ProtectedRoute />}>
             <Route element={<DashboardLayout />}>

@@ -1,4 +1,5 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
+import { validateHubLogin } from '../lib/authConfig';
 
 export interface MockProfile {
   nome: string;
@@ -14,7 +15,7 @@ interface AuthState {
   signOut: () => Promise<void>;
 }
 
-const STORAGE_KEY = 'blackline-mock-session';
+const STORAGE_KEY = 'blackline-hub-session';
 
 const AuthContext = createContext<AuthState | null>(null);
 
@@ -37,7 +38,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setLoading(false);
   }, []);
 
-  const signIn = useCallback(async (usuario: string, _password: string) => {
+  const signIn = useCallback(async (usuario: string, password: string) => {
+    if (!validateHubLogin(usuario, password)) {
+      throw new Error('Usuário ou senha inválidos.');
+    }
     const nome = usuario.trim() || 'Equipe BlackLine';
     const next: MockProfile = {
       nome,

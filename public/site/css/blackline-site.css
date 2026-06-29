@@ -1258,6 +1258,114 @@ a.bl-footer__contact-link:hover { color: var(--bl-gold-bright); }
 }
 .bl-glass:hover { border-color: var(--bl-border-gold); }
 
+/* Galeria & antes/depois */
+.bl-gallery {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+.bl-gallery__item {
+  margin: 0;
+  background: var(--bl-surface);
+  border: 1px solid var(--bl-border);
+}
+.bl-gallery__item img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+}
+.bl-gallery__item figcaption {
+  padding: 0.85rem 1rem;
+  font-size: 0.8rem;
+  color: var(--bl-text-muted);
+  border-top: 1px solid var(--bl-border);
+}
+.bl-ba {
+  position: relative;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  user-select: none;
+}
+.bl-ba__before,
+.bl-ba__after {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.bl-ba__after {
+  clip-path: inset(0 50% 0 0);
+}
+.bl-ba__slider {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: ew-resize;
+  z-index: 3;
+}
+.bl-ba__label {
+  position: absolute;
+  top: 0.65rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: rgba(10, 22, 40, 0.75);
+  color: var(--bl-white);
+  z-index: 2;
+}
+.bl-ba__label--before { left: 0.65rem; }
+.bl-ba__label--after { right: 0.65rem; }
+
+/* Simulador de tonalidade */
+.bl-tint-compare {
+  position: relative;
+  aspect-ratio: 16/9;
+  border: 1px solid var(--bl-border-gold);
+  overflow: hidden;
+  margin-top: 1rem;
+}
+.bl-tint-compare img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.bl-tint-compare__overlay {
+  position: absolute;
+  inset: 0;
+  background: #0a1628;
+  opacity: 0.35;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+.bl-tint-compare input[type=range] {
+  width: 100%;
+  margin-top: 1rem;
+  accent-color: var(--bl-gold);
+  min-height: var(--bl-tap-min);
+}
+
+.bl-map-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bl-gold-bright);
+  border: 1px solid var(--bl-border-gold);
+  padding: 0.65rem 1rem;
+  transition: background 0.2s;
+}
+.bl-map-btn:hover { background: var(--bl-accent-blue-glow); }
+
 /* Mobile action bar */
 .bl-mobile-bar {
   position: fixed;

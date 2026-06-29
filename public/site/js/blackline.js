@@ -126,7 +126,10 @@
   function initOrcamentoForm() {
     const form = document.getElementById('bl-orcamento-form');
     if (!form) return;
-    form.addEventListener('submit', (e) => {
+    const formspreeMeta = document.querySelector('meta[name="blackline-formspree"]');
+    const formspreeId = formspreeMeta?.getAttribute('content')?.trim() || '';
+
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const nome = /** @type {HTMLInputElement} */ (document.getElementById('bl-nome'))?.value.trim();
       const tel = /** @type {HTMLInputElement} */ (document.getElementById('bl-tel'))?.value.trim();
@@ -141,8 +144,64 @@
         servico ? `Serviço: ${servico}` : '',
         msg ? `Detalhes: ${msg}` : '',
       ].filter(Boolean);
+
+      if (formspreeId) {
+        try {
+          await fetch(`https://formspree.io/f/${formspreeId}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+            body: JSON.stringify({
+              nome,
+              telefone: tel,
+              veiculo,
+              servico,
+              mensagem: msg,
+              _subject: 'Orçamento BlackLine',
+            }),
+          });
+        } catch (err) {
+          console.warn('[BlackLine] Formspree indisponível', err);
+        }
+      }
+
       window.open(`https://wa.me/${WA}?text=${encodeURIComponent(lines.join('\n'))}`, '_blank', 'noopener');
     });
+  }
+
+  function initBaCompare() {
+    document.querySelectorAll('[data-ba]').forEach((wrap) => {
+      const slider = wrap.querySelector('.bl-ba__slider');
+      const after = wrap.querySelector('.bl-ba__after');
+      if (!slider || !after) return;
+      const update = () => {
+        const v = slider.value;
+        after.style.clipPath = `inset(0 ${100 - v}% 0 0)`;
+      };
+      slider.addEventListener('input', update);
+      update();
+    });
+  }
+
+  function initTintSimulator() {
+    const wrap = document.getElementById('bl-tint-compare');
+    const slider = document.getElementById('bl-tint-slider');
+    const overlay = document.getElementById('bl-tint-overlay');
+    const label = document.getElementById('bl-tint-label');
+    if (!wrap || !slider || !overlay || !label) return;
+    const levels = [
+      { v: 0, opacity: 0, text: 'Sem película — máxima transparência' },
+      { v: 35, opacity: 0.35, text: 'carbon BLACK — conforto urbano' },
+      { v: 65, opacity: 0.55, text: 'Médio — privacidade equilibrada' },
+      { v: 100, opacity: 0.72, text: 'Ceramic BLACK — máxima rejeição térmica' },
+    ];
+    const update = () => {
+      const val = parseInt(slider.value, 10);
+      const level = levels.reduce((a, b) => (Math.abs(b.v - val) < Math.abs(a.v - val) ? b : a));
+      overlay.style.opacity = String(0.15 + (val / 100) * 0.65);
+      label.textContent = level.text;
+    };
+    slider.addEventListener('input', update);
+    update();
   }
 
   function injectWaFloat() {
@@ -166,6 +225,8 @@
     initHeatSlider,
     initPpfHotspots,
     initOrcamentoForm,
+    initBaCompare,
+    initTintSimulator,
     injectWaFloat,
     initAll() {
       initPreloader();
@@ -176,6 +237,8 @@
       initHeatSlider();
       initPpfHotspots();
       initOrcamentoForm();
+      initBaCompare();
+      initTintSimulator();
       injectWaFloat();
     },
   };
@@ -188,5 +251,7 @@
     initHeatSlider();
     initPpfHotspots();
     initOrcamentoForm();
+    initBaCompare();
+    initTintSimulator();
   });
 })();

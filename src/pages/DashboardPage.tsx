@@ -1,11 +1,13 @@
 import { PageHeader } from '../components/PageHeader';
-import { BLACKLINE_PRODUCTS, MOCK_CLIENTS } from '../data/blackline';
+import { BLACKLINE_PRODUCTS } from '../data/blackline';
+import { getClients } from '../lib/hubStore';
 import { useAuth } from '../contexts/AuthContext';
 import styles from './DashboardPage.module.css';
 
 export function DashboardPage() {
   const { profile } = useAuth();
-  const emAndamento = MOCK_CLIENTS.filter((c) => c.status === 'Em andamento').length;
+  const clients = getClients();
+  const emAndamento = clients.filter((c) => c.status === 'Em andamento').length;
 
   return (
     <div>
@@ -26,7 +28,7 @@ export function DashboardPage() {
         </article>
         <article className={styles.kpiCard}>
           <span className={styles.kpiLabel}>Clientes ativos</span>
-          <strong className={styles.kpiValue}>{MOCK_CLIENTS.length}</strong>
+          <strong className={styles.kpiValue}>{clients.length}</strong>
         </article>
         <article className={styles.kpiCard}>
           <span className={styles.kpiLabel}>Serviços em andamento</span>
@@ -51,7 +53,7 @@ export function DashboardPage() {
               </tr>
             </thead>
             <tbody>
-              {MOCK_CLIENTS.map((c) => (
+              {clients.map((c) => (
                 <tr key={c.id}>
                   <td>{c.nome}</td>
                   <td>{c.veiculo}</td>

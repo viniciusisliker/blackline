@@ -13,6 +13,7 @@ export function LoginPage() {
   const [usuario, setUsuario] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   if (session) {
     return <Navigate to={from} replace />;
@@ -21,9 +22,12 @@ export function LoginPage() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    setError('');
     try {
       await signIn(usuario, password);
       navigate(from, { replace: true });
+    } catch {
+      setError('Usuário ou senha inválidos.');
     } finally {
       setLoading(false);
     }
@@ -47,12 +51,12 @@ export function LoginPage() {
       <div className={`card ${styles.card}`}>
         <div className={styles.cardGlow} aria-hidden />
         <div className={styles.logoWrap}>
-          <BlackLineLogo size="lg" showSubtitle />
+          <BlackLineLogo size="lg" />
         </div>
         <div className={styles.header}>
           <h1 className={styles.title}>Entrar</h1>
           <p className={styles.subtitle}>Acesso restrito à equipe BlackLine</p>
-          <p className={styles.mockNote}>Modo demonstração — qualquer usuário e senha funcionam.</p>
+          <p className={styles.mockNote}>Demo: usuário <strong>equipe</strong> · senha <strong>blackline2026</strong></p>
         </div>
 
         <form className={styles.form} onSubmit={(e) => void handleSubmit(e)}>
@@ -65,8 +69,9 @@ export function LoginPage() {
                 type="text"
                 value={usuario}
                 onChange={(e) => setUsuario(e.target.value)}
-                placeholder="Usuário ou e-mail"
+                placeholder="Usuário"
                 autoComplete="username"
+                required
               />
             </div>
           </label>
@@ -81,9 +86,11 @@ export function LoginPage() {
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Senha"
                 autoComplete="current-password"
+                required
               />
             </div>
           </label>
+          {error ? <p className={styles.error}>{error}</p> : null}
           <button type="submit" className="btn-primary" disabled={loading}>
             {loading ? 'Entrando…' : 'Entrar'}
           </button>
@@ -91,6 +98,8 @@ export function LoginPage() {
 
         <p className={styles.back}>
           <a href={`${import.meta.env.BASE_URL}site/index.html`}>← Voltar ao site</a>
+          {' · '}
+          <a href={`${import.meta.env.BASE_URL}portal`}>Portal cliente</a>
         </p>
       </div>
     </div>

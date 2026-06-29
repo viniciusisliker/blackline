@@ -37,7 +37,24 @@
         { icon: 'chat', text: 'Resposta rápida' },
       ],
     },
+    garantia: {
+      label: 'Garantia',
+      chips: [
+        { icon: 'verified', text: 'Até 10 anos' },
+        { icon: 'description', text: 'Documentada' },
+      ],
+    },
+    galeria: {
+      label: 'Galeria',
+      chips: [
+        { icon: 'photo_library', text: 'Resultados reais' },
+        { icon: 'compare', text: 'Antes / depois' },
+      ],
+    },
   };
+
+  const MAPS_URL =
+    'https://www.google.com/maps/search/?api=1&query=Av.+Engenheiro+Caetano+%C3%81lvares,+3004,+S%C3%A3o+Paulo+-+SP';
 
   async function loadPartial(filename) {
     const root = window.location.href.replace(/\/[^/]*$/, '/').replace(/\/+$/, '/');
@@ -161,7 +178,10 @@
     window.BlackLineSite?.initMobileNav?.();
     window.BlackLine?.initNavScroll?.();
     window.BlackLine?.initReveal?.();
+    window.BlackLine?.initBaCompare?.();
+    window.BlackLine?.initTintSimulator?.();
     window.BlackLine?.injectWaFloat?.();
+    window.BlackLineSeo?.injectJsonLd?.();
   } catch (err) {
     console.error('[BlackLine components.js]', err);
   }
