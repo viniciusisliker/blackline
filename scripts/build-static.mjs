@@ -1,7 +1,9 @@
-import { cpSync, mkdirSync, writeFileSync } from 'node:fs';
+import { cpSync, mkdirSync, writeFileSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 const dist = 'dist';
+const siteSrc = join('public', 'site');
+const siteDist = join(dist, 'site');
 
 function redirect(target) {
   return `<!DOCTYPE html>
@@ -19,7 +21,21 @@ function redirect(target) {
 </html>`;
 }
 
+function inlineLayout(html) {
+  const navbar = readFileSync(join(siteSrc, 'components/navbar.html'), 'utf8');
+  const footer = readFileSync(join(siteSrc, 'components/footer.html'), 'utf8');
+  return html
+    .replace('<div id="bl-navbar"></div>', `<div id="bl-navbar">${navbar}</div>`)
+    .replace('<div id="bl-footer"></div>', `<div id="bl-footer">${footer}</div>`);
+}
+
 cpSync('public', dist, { recursive: true });
+
+for (const file of readdirSync(siteDist).filter((f) => f.endsWith('.html'))) {
+  const path = join(siteDist, file);
+  const html = readFileSync(path, 'utf8');
+  writeFileSync(path, inlineLayout(html), 'utf8');
+}
 
 writeFileSync(join(dist, 'index.html'), redirect('site/index.html'));
 writeFileSync(join(dist, '404.html'), redirect('site/index.html'));
@@ -36,4 +52,4 @@ for (const [path, target] of legacy) {
   writeFileSync(join(dir, 'index.html'), redirect(`../${target}`));
 }
 
-console.log('Build estático concluído → dist/');
+console.log('Build estático concluído → dist/ (navbar/footer inlined)');

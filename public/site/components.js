@@ -33,7 +33,7 @@
     orcamento: {
       label: 'Orçamento',
       chips: [
-        { icon: 'chat', text: 'WhatsApp' },
+        { icon: 'forum', text: 'WhatsApp' },
         { icon: 'schedule', text: 'Resposta rápida' },
       ],
     },
@@ -159,7 +159,7 @@
     bar.id = 'bl-mobile-bar';
     bar.setAttribute('aria-label', 'Ações rápidas');
     bar.innerHTML = `
-      <a href="https://wa.me/5511939287036?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20na%20BlackLine." class="bl-mobile-bar__item bl-mobile-bar__item--primary" target="_blank" rel="noopener">
+      <a href="orcamento.html" class="bl-mobile-bar__item bl-mobile-bar__item--primary">
         <span class="material-symbols-outlined" aria-hidden="true">request_quote</span>
         Orçamento
       </a>
@@ -174,9 +174,12 @@
   }
 
   try {
-    const [navbar, footer] = await Promise.all([loadPartial('navbar.html'), loadPartial('footer.html')]);
-    inject('bl-navbar', navbar);
-    inject('bl-footer', footer);
+    const hasLayout = document.querySelector('.bl-nav') && document.querySelector('.bl-footer');
+    if (!hasLayout) {
+      const [navbar, footer] = await Promise.all([loadPartial('navbar.html'), loadPartial('footer.html')]);
+      inject('bl-navbar', navbar);
+      inject('bl-footer', footer);
+    }
     setActiveLink();
     enhancePageHero();
     enhanceTables();
