@@ -3,7 +3,7 @@
   display: grid;
   place-items: center;
   padding: 1.5rem;
-  background: linear-gradient(180deg, var(--bl-blue-deep, #071018), var(--bg));
+  background: linear-gradient(180deg, var(--bl-white, #fff), var(--bl-fog, #f8fafc));
 }
 
 .card {

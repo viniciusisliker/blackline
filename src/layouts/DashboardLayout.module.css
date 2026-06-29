@@ -8,7 +8,7 @@
   position: sticky;
   top: 0;
   z-index: 40;
-  background: rgba(10, 22, 40, 0.94);
+  background: rgba(255, 255, 255, 0.92);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(14px);
 }
@@ -31,7 +31,7 @@
 }
 
 .brandBlock:hover {
-  background: rgba(59, 130, 246, 0.08);
+  background: rgba(232, 197, 71, 0.1);
 }
 
 .menuBtn {

@@ -8,8 +8,8 @@
   height: 2px;
   width: 0%;
   z-index: 200;
-  background: linear-gradient(90deg, var(--bl-gold-dim), var(--bl-blue-accent), var(--bl-gold-bright), var(--bl-white));
-  box-shadow: 0 0 12px var(--bl-blue-glow), 0 0 8px rgba(201, 168, 78, 0.4);
+  background: linear-gradient(90deg, var(--bl-gold-dim), var(--bl-silver-muted), var(--bl-gold-bright), var(--bl-white));
+  box-shadow: 0 0 12px rgba(232, 197, 71, 0.35), 0 0 6px rgba(220, 227, 237, 0.5);
   pointer-events: none;
   transition: width 0.08s linear;
 }

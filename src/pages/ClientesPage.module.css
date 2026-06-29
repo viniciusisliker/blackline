@@ -59,7 +59,7 @@
   height: 2.5rem;
   border-radius: 50%;
   flex-shrink: 0;
-  background: linear-gradient(135deg, var(--bl-gold), #6b5420);
+  background: linear-gradient(135deg, var(--bl-gold-bright), var(--bl-gold));
   color: var(--bl-blue);
   display: flex;
   align-items: center;
