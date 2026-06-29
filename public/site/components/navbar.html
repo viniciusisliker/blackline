@@ -1,0 +1,45 @@
+<header class="bl-nav">
+  <div class="bl-nav__bar">
+    <a href="home.html" class="bl-nav__brand" aria-label="BlackLine — início">
+      <img src="img/favicon.svg" alt="" width="28" height="28" class="bl-nav__mark" />
+      <span class="bl-nav__brand-text">
+        <span class="bl-nav__name">BlackLine</span>
+        <span class="bl-nav__tag">Studio Automotivo</span>
+      </span>
+    </a>
+
+    <nav class="bl-nav__links" aria-label="Menu principal">
+      <a class="bl-nav__link nav-link" href="home.html" data-page="home">Início</a>
+      <a class="bl-nav__link nav-link" href="produtos.html" data-page="produtos">Produtos</a>
+      <a class="bl-nav__link nav-link" href="empresa.html" data-page="empresa">Empresa</a>
+      <a class="bl-nav__link nav-link" href="contato.html" data-page="contato">Contato</a>
+    </nav>
+
+    <div class="bl-nav__utils">
+      <div class="bl-theme" role="group" aria-label="Tema">
+        <button type="button" class="bl-theme__btn" data-theme-btn="light" aria-label="Claro"><span class="material-symbols-outlined">light_mode</span></button>
+        <button type="button" class="bl-theme__btn" data-theme-btn="dark" aria-label="Escuro"><span class="material-symbols-outlined">dark_mode</span></button>
+        <button type="button" class="bl-theme__btn" data-theme-btn="auto" aria-label="Auto"><span class="material-symbols-outlined">brightness_auto</span></button>
+      </div>
+      <a href="/blackline/login" class="bl-btn bl-btn--gold bl-nav__hub">Hub</a>
+      <button type="button" class="bl-nav__toggle" id="bl-nav-toggle" aria-expanded="false" aria-controls="bl-nav-drawer" aria-label="Menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="bl-nav__drawer" id="bl-nav-drawer" aria-hidden="true">
+    <button type="button" class="bl-nav__backdrop" id="bl-nav-backdrop" aria-label="Fechar"></button>
+    <div class="bl-nav__panel" id="bl-nav-panel">
+      <div class="bl-nav__panel-head">
+        <span>Menu</span>
+        <button type="button" id="bl-nav-close" aria-label="Fechar"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <a class="bl-nav__link nav-link" href="home.html" data-page="home">Início</a>
+      <a class="bl-nav__link nav-link" href="produtos.html" data-page="produtos">Produtos</a>
+      <a class="bl-nav__link nav-link" href="empresa.html" data-page="empresa">Empresa</a>
+      <a class="bl-nav__link nav-link" href="contato.html" data-page="contato">Contato</a>
+      <a href="/blackline/login" class="bl-btn bl-btn--gold">Acessar Hub</a>
+    </div>
+  </div>
+</header>
