@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="css/blackline-site.css" />
   <link rel="stylesheet" href="css/blackline-motion.css" />
 </head>
-<body class="bl-grain" data-page="home">
+<body data-page="home">
   <div class="bl-preloader" id="bl-preloader" aria-hidden="true">
     <div>
       <img src="img/logo-blackline.png" alt="BlackLine Studio Automotivo" class="bl-preloader__logo" width="220" height="66" />
@@ -39,34 +39,28 @@
   <div id="bl-navbar"></div>
 
   <main class="bl-page">
-    <section class="bl-hero" data-parallax data-spotlight>
-      <div class="bl-hero__media">
-        <div class="bl-hero__media-bg" style="background-image:url('img/hero.png')"></div>
-        <div class="bl-hero__overlay"></div>
-      </div>
-      <div class="bl-hero__fx" aria-hidden="true">
-        <canvas class="bl-speed-canvas"></canvas>
-        <div class="bl-hero__scan"></div>
-        <div class="bl-hero__headlight bl-hero__headlight--l"></div>
-        <div class="bl-hero__headlight bl-hero__headlight--r"></div>
-        <div class="bl-hero__hud"></div>
-        <div class="bl-hero__spotlight"></div>
-        <div class="bl-tire-tracks"></div>
-      </div>
-      <div class="bl-hero__content bl-reveal is-visible">
-        <div class="bl-hero__meta">
-          <span class="bl-hero__chip"><span class="material-symbols-outlined" aria-hidden="true">location_on</span> São Paulo · SP</span>
-          <span class="bl-hero__chip"><span class="material-symbols-outlined" aria-hidden="true">verified</span> Garantia até 10 anos</span>
+    <section class="bl-hero" id="top">
+      <div class="bl-hero__inner">
+        <div class="bl-hero__content bl-reveal is-visible">
+          <div class="bl-hero__meta">
+            <span class="bl-hero__chip"><span class="material-symbols-outlined" aria-hidden="true">location_on</span> São Paulo · SP</span>
+            <span class="bl-hero__chip"><span class="material-symbols-outlined" aria-hidden="true">verified</span> Garantia até 10 anos</span>
+          </div>
+          <p class="bl-eyebrow">Studio Automotivo · São Paulo</p>
+          <h1 class="bl-display">Proteção <span>máxima</span><br />para seu veículo</h1>
+          <p class="bl-lead">Películas térmicas, antivandalismo, PPF e reforço de vidros com garantia de até 10 anos. Acabamento premium com a assinatura BlackLine.</p>
+          <div class="bl-hero__actions">
+            <a href="https://wa.me/5511939287036?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20na%20BlackLine." class="bl-btn bl-btn--gold" target="_blank" rel="noopener">Orçamento grátis <span class="material-symbols-outlined" style="font-size:1rem">arrow_forward</span></a>
+            <a href="#servicos" class="bl-btn bl-btn--ghost">Explorar serviços</a>
+          </div>
         </div>
-        <p class="bl-eyebrow">Studio Automotivo · São Paulo</p>
-        <h1 class="bl-display">Proteção <span>máxima</span><br />para seu veículo</h1>
-        <p class="bl-lead">Películas térmicas, antivandalismo, PPF e reforço de vidros com garantia de até 10 anos. A armadura que seu carro merece — com a assinatura BlackLine.</p>
-        <div class="bl-hero__actions">
-          <a href="https://wa.me/5511939287036?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20na%20BlackLine." class="bl-btn bl-btn--gold" target="_blank" rel="noopener">Orçamento grátis <span class="material-symbols-outlined" style="font-size:1rem">arrow_forward</span></a>
-          <a href="#servicos" class="bl-btn bl-btn--ghost">Explorar serviços</a>
+        <div class="bl-hero__visual bl-reveal bl-reveal-delay-1">
+          <div class="bl-img-frame">
+            <img src="img/hero.png" alt="Veículo com proteção BlackLine" width="1200" height="900" decoding="async" fetchpriority="high" />
+            <span class="bl-img-frame__accent" aria-hidden="true"></span>
+          </div>
         </div>
       </div>
-      <div class="bl-hero__scroll" aria-hidden="true"><span>Scroll</span><span></span></div>
     </section>
 
     <section class="bl-section" style="padding-top:0">
@@ -83,7 +77,7 @@
     <section class="bl-section bl-slash bg-elevated" id="servicos" style="background:var(--bl-bg-elevated)">
       <div class="bl-container">
         <h2 class="bl-h2 bl-reveal">Películas térmicas</h2>
-        <p class="bl-lead bl-reveal bl-reveal-delay-1" style="margin-bottom:2.5rem">Conforto térmico e estética agressiva em preto profundo.</p>
+        <p class="bl-lead bl-reveal bl-reveal-delay-1" style="margin-bottom:2.5rem">Conforto térmico e acabamento refinado em tons elegantes.</p>
         <div class="bl-grid bl-grid--2" data-stagger>
           <article class="bl-card bl-reveal">
             <div style="display:flex;gap:1.25rem;align-items:center;margin-bottom:1rem">
@@ -142,8 +136,8 @@
           </div>
           <a href="antivandalismo.html" class="bl-btn bl-btn--gold" style="margin-top:2rem">Conhecer a tecnologia</a>
         </div>
-        <div class="bl-split__media bl-reveal bl-reveal-delay-2">
-          <img src="img/produtos-banner.png" alt="Película antivandalismo instalada" width="800" height="500" loading="lazy" decoding="async" />
+        <div class="bl-split__media bl-reveal bl-reveal-delay-2 bl-media-img">
+          <img src="img/produtos-banner.png" alt="Película antivandalismo instalada" width="800" height="500" loading="lazy" decoding="async" class="bl-media-img" />
           <div class="bl-split__media-overlay"></div>
         </div>
       </div>
@@ -151,8 +145,8 @@
 
     <section class="bl-section">
       <div class="bl-container bl-split">
-        <div class="bl-split__media bl-reveal" style="order:2">
-          <img src="img/hero.png" alt="PPF paint protection film" width="800" height="500" loading="lazy" decoding="async" />
+        <div class="bl-split__media bl-reveal bl-media-img" style="order:2">
+          <img src="img/hero.png" alt="PPF paint protection film" width="800" height="500" loading="lazy" decoding="async" class="bl-media-img" />
         </div>
         <div class="bl-reveal bl-reveal-delay-1" style="order:1">
           <p class="bl-eyebrow">Paint Protection Film</p>
