@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "npx --yes serve public -l 5173",
     "build": "node scripts/build-static.mjs",
-    "images": "node scripts/fetch-demo-images.mjs && powershell -ExecutionPolicy Bypass -File scripts/lighten-images.ps1",
+    "images": "node scripts/fetch-demo-images.mjs",
     "preview": "npx --yes serve dist -l 4173"
   }
 }

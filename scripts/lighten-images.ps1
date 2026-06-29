@@ -1,12 +1,22 @@
-# Clareia imagens do site para visual premium claro (branco/prata)
+# Clareia levemente imagens do site (opcional).
+# O tema claro é aplicado via CSS — evite valores altos que estouram o PNG para branco.
+param(
+    [switch]$Apply
+)
+
+if (-not $Apply) {
+    Write-Host "Pulado: use -Apply para clarear. Recomendado manter originais + filtros CSS."
+    exit 0
+}
+
 Add-Type -AssemblyName System.Drawing
 
 function Set-LighterImage {
     param(
         [string]$Path,
-        [float]$Brightness = 1.32,
-        [float]$Saturation = 0.82,
-        [float]$Lift = 42
+        [float]$Brightness = 1.06,
+        [float]$Saturation = 0.94,
+        [float]$Lift = 6
     )
 
     if (-not (Test-Path $Path)) {
@@ -44,8 +54,15 @@ function Set-LighterImage {
     $bmp.Dispose()
     $img.Dispose()
 
+    $newSize = (Get-Item $temp).Length
+    if ($newSize -lt 10KB) {
+        Remove-Item $temp -Force
+        Write-Warning "Ignorado (arquivo corrompido): $resolved"
+        return
+    }
+
     Move-Item -Force $temp $resolved
-    Write-Host "OK: $resolved"
+    Write-Host "OK: $resolved ($([math]::Round($newSize/1KB,1)) KB)"
 }
 
 $root = Join-Path $PSScriptRoot '..\public\site\img'
