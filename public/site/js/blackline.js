@@ -167,7 +167,7 @@
     a.rel = 'noopener';
     a.className = 'bl-wa-float';
     a.setAttribute('aria-label', 'WhatsApp BlackLine');
-    a.innerHTML = '<span class="material-symbols-outlined">chat</span>';
+    a.innerHTML = '<span class="bl-icon-whatsapp" aria-hidden="true"></span>';
     document.body.appendChild(a);
   }
 

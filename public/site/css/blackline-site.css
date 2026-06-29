@@ -49,8 +49,8 @@
 
   --bl-max: 1280px;
   --bl-nav-h: 4rem;
-  --bl-radius: 10px;
-  --bl-radius-lg: 16px;
+  --bl-radius: 0;
+  --bl-radius-lg: 0;
   --bl-font: 'Inter', system-ui, sans-serif;
   --bl-display: 'Barlow Condensed', 'Inter', sans-serif;
   --bl-section: clamp(4rem, 10vw, 7.5rem);
@@ -107,6 +107,15 @@ button { font-family: inherit; cursor: pointer; }
   transition: opacity 0.6s ease, visibility 0.6s;
 }
 .bl-preloader.is-done { opacity: 0; visibility: hidden; pointer-events: none; }
+.bl-preloader > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: min(100%, 28rem);
+  padding: 1.5rem;
+}
 .bl-preloader__shield {
   width: 4rem;
   height: 4rem;
@@ -114,20 +123,23 @@ button { font-family: inherit; cursor: pointer; }
 }
 .bl-preloader__logo {
   display: block;
-  width: auto;
-  max-width: min(16rem, 80vw);
-  max-height: 5rem;
+  width: min(22rem, 88vw);
+  max-width: none;
+  height: auto;
+  max-height: 7.5rem;
+  margin-inline: auto;
   object-fit: contain;
   filter: none;
   animation: blPulse 1.2s ease-in-out infinite;
 }
 .bl-preloader__bar {
-  width: 8rem;
+  width: min(12rem, 70vw);
   height: 2px;
   background: var(--bl-border);
   margin-top: 1.5rem;
+  margin-inline: auto;
   overflow: hidden;
-  border-radius: 1px;
+  border-radius: 0;
 }
 .bl-preloader__bar span {
   display: block;
@@ -315,6 +327,37 @@ button { font-family: inherit; cursor: pointer; }
   border-color: rgba(37, 211, 102, 0.4);
   background: rgba(37, 211, 102, 0.08);
 }
+.bl-nav__icon-btn--wa {
+  color: var(--bl-wa);
+  border-color: rgba(37, 211, 102, 0.35);
+  background: rgba(37, 211, 102, 0.08);
+}
+.bl-nav__icon-btn--wa:hover {
+  border-color: rgba(37, 211, 102, 0.55);
+  background: rgba(37, 211, 102, 0.14);
+}
+.bl-icon-whatsapp {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: currentColor;
+  mask-image: url('../img/icon-whatsapp.svg');
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  -webkit-mask-image: url('../img/icon-whatsapp.svg');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+}
+.bl-nav__icon-btn .bl-icon-whatsapp {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+.bl-btn .bl-icon-whatsapp {
+  color: var(--bl-wa);
+}
 .bl-nav__hub-link {
   display: none;
   font-size: 0.65rem;
@@ -478,7 +521,7 @@ button { font-family: inherit; cursor: pointer; }
   letter-spacing: 0.1em;
   text-transform: uppercase;
   border: none;
-  border-radius: 999px;
+  border-radius: 0;
   transition: transform 0.15s, filter 0.2s, box-shadow 0.2s;
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
@@ -621,7 +664,7 @@ button { font-family: inherit; cursor: pointer; }
   height: 100%;
   object-fit: cover;
   display: block;
-  filter: brightness(1.06) contrast(0.96) saturate(0.9);
+  filter: brightness(1.12) contrast(0.94) saturate(0.86);
 }
 .bl-img-frame__accent {
   position: absolute;
@@ -638,9 +681,8 @@ button { font-family: inherit; cursor: pointer; }
 .bl-media-img,
 .bl-split__media img,
 .bl-gallery__item img,
-.bl-page-hero__bg img,
 .bl-tint-compare img {
-  filter: brightness(1.08) contrast(0.95) saturate(0.88);
+  filter: brightness(1.1) contrast(0.93) saturate(0.84);
 }
 .bl-split__media {
   border-radius: var(--bl-radius-lg);
@@ -742,7 +784,7 @@ button { font-family: inherit; cursor: pointer; }
 .bl-warranty {
   width: 5.5rem;
   height: 5.5rem;
-  border-radius: 50%;
+  border-radius: 0;
   border: 2px solid var(--bl-gold);
   display: flex;
   flex-direction: column;
@@ -853,7 +895,7 @@ button { font-family: inherit; cursor: pointer; }
 .bl-impact__ring {
   position: absolute;
   inset: 0;
-  border-radius: 50%;
+  border-radius: 0;
   border: 3px solid var(--bl-border);
 }
 .bl-impact__ring--inner {
@@ -939,7 +981,7 @@ button { font-family: inherit; cursor: pointer; }
   position: absolute;
   width: 12px;
   height: 12px;
-  border-radius: 50%;
+  border-radius: 0;
   background: var(--bl-gold-bright);
   box-shadow: 0 0 16px var(--bl-gold);
   cursor: pointer;
@@ -1172,7 +1214,7 @@ a.bl-footer__contact-link:hover { color: var(--bl-gold-bright); }
   z-index: 90;
   width: 3.25rem;
   height: 3.25rem;
-  border-radius: 50%;
+  border-radius: 0;
   background: var(--bl-wa);
   color: #fff;
   display: flex;
@@ -1185,7 +1227,10 @@ a.bl-footer__contact-link:hover { color: var(--bl-gold-bright); }
   transform: scale(1.08);
   box-shadow: 0 6px 28px rgba(37, 211, 102, 0.5);
 }
-.bl-wa-float .material-symbols-outlined { font-size: 1.5rem; }
+.bl-wa-float .bl-icon-whatsapp {
+  width: 1.65rem;
+  height: 1.65rem;
+}
 
 /* Page hero (inner pages) */
 .bl-page-hero {
@@ -1207,9 +1252,9 @@ a.bl-footer__contact-link:hover { color: var(--bl-gold-bright); }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.14;
+  opacity: 0.22;
   transform: scale(1.02);
-  filter: brightness(1.2) saturate(0.75) blur(2px);
+  filter: brightness(1.35) contrast(0.9) saturate(0.72) blur(1px);
 }
 .bl-page-hero__fade {
   position: absolute;
@@ -1653,7 +1698,7 @@ a.bl-footer__contact-link:hover { color: var(--bl-gold-bright); }
 .bl-portal__form input {
   padding: 0.85rem 1rem;
   border: 1px solid var(--bl-border-silver);
-  border-radius: 8px;
+  border-radius: 0;
   background: var(--bl-white-soft);
   color: var(--bl-text);
   font-size: 1rem;

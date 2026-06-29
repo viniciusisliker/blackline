@@ -1,8 +1,13 @@
-# Clareia imagens do site para visual premium (branco/prata)
+# Clareia imagens do site para visual premium claro (branco/prata)
 Add-Type -AssemblyName System.Drawing
 
 function Set-LighterImage {
-    param([string]$Path, [float]$Brightness = 1.18, [float]$Saturation = 0.88)
+    param(
+        [string]$Path,
+        [float]$Brightness = 1.32,
+        [float]$Saturation = 0.82,
+        [float]$Lift = 42
+    )
 
     if (-not (Test-Path $Path)) {
         Write-Warning "Arquivo não encontrado: $Path"
@@ -24,9 +29,9 @@ function Set-LighterImage {
     $cm.Matrix22 = $gray * $Saturation
     $cm.Matrix33 = 1
     $cm.Matrix44 = 1
-    $cm.Matrix40 = 18
-    $cm.Matrix41 = 18
-    $cm.Matrix42 = 18
+    $cm.Matrix40 = $Lift
+    $cm.Matrix41 = $Lift
+    $cm.Matrix42 = $Lift
 
     $ia = New-Object System.Drawing.Imaging.ImageAttributes
     $ia.SetColorMatrix($cm)
@@ -44,5 +49,9 @@ function Set-LighterImage {
 }
 
 $root = Join-Path $PSScriptRoot '..\public\site\img'
-Set-LighterImage (Join-Path $root 'hero.png')
-Set-LighterImage (Join-Path $root 'produtos-banner.png')
+$skip = @('logo-blackline.png', 'favicon.png', 'favicon-16.png', 'favicon-32.png', 'apple-touch-icon.png')
+
+Get-ChildItem -Path $root -Filter '*.png' | ForEach-Object {
+    if ($skip -contains $_.Name) { return }
+    Set-LighterImage $_.FullName
+}

@@ -164,7 +164,7 @@
         Orçamento
       </a>
       <a href="https://wa.me/5511939287036" class="bl-mobile-bar__item" target="_blank" rel="noopener">
-        <span class="material-symbols-outlined" aria-hidden="true">chat</span>
+        <span class="bl-icon-whatsapp" aria-hidden="true"></span>
         WhatsApp
       </a>
     `;
