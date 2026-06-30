@@ -25,10 +25,10 @@
   height: clamp(16rem, 42vw, 20rem);
   perspective: 1400px;
   perspective-origin: 50% 42%;
-  border: 1px solid var(--bl-border-silver);
+  border: 1px solid rgba(200, 209, 220, 0.65);
   background:
-    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(74, 111, 165, 0.12) 0%, transparent 65%),
-    linear-gradient(180deg, var(--bl-surface) 0%, var(--bl-bg) 100%);
+    radial-gradient(ellipse 75% 55% at 50% 0%, rgba(255, 255, 255, 0.55) 0%, transparent 58%),
+    linear-gradient(180deg, var(--bl-pearl-highlight) 0%, var(--bl-pearl-mid) 55%, var(--bl-bg) 100%);
   overflow: hidden;
   touch-action: manipulation;
   cursor: grab;
