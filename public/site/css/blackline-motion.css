@@ -9,7 +9,7 @@
   width: 0%;
   z-index: 200;
   background: linear-gradient(90deg, var(--bl-gold-dim), var(--bl-silver-muted), var(--bl-gold-bright), var(--bl-white));
-  box-shadow: 0 0 12px rgba(232, 197, 71, 0.35), 0 0 6px rgba(220, 227, 237, 0.5);
+  box-shadow: 0 0 12px rgba(228, 179, 21, 0.35), 0 0 6px rgba(220, 227, 237, 0.5);
   pointer-events: none;
   transition: width 0.08s linear;
 }
@@ -160,7 +160,7 @@
     105deg,
     transparent 40%,
     rgba(255, 255, 255, 0.06) 48%,
-    rgba(232, 197, 71, 0.12) 50%,
+    rgba(228, 179, 21, 0.12) 50%,
     rgba(255, 255, 255, 0.06) 52%,
     transparent 60%
   );
@@ -265,7 +265,7 @@
 .bl-heal-ring {
   position: absolute;
   border-radius: 0;
-  border: 1px solid rgba(232, 197, 71, 0.5);
+  border: 1px solid rgba(228, 179, 21, 0.5);
   pointer-events: none;
   animation: blHeal 1.2s ease-out forwards;
 }

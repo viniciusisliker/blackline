@@ -65,7 +65,7 @@
     function frame() {
       if (!ctx) return;
       ctx.clearRect(0, 0, w, h);
-      ctx.strokeStyle = 'rgba(232, 197, 71, 0.6)';
+      ctx.strokeStyle = 'rgba(228, 179, 21, 0.6)';
       ctx.lineWidth = 1;
       lines.forEach((l) => {
         l.x += l.speed;
