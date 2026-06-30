@@ -24,6 +24,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/blackline-site.css" />
   <link rel="stylesheet" href="css/blackline-motion.css" />
+  <link rel="stylesheet" href="css/blackline-3d.css" />
 </head>
 <body data-page="peliculas">
   <div id="bl-navbar"></div>
@@ -52,6 +53,19 @@
         <label for="bl-tint-slider" style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--bl-text-muted)">Intensidade da película</label>
         <input type="range" id="bl-tint-slider" min="0" max="100" value="50" />
         <p id="bl-tint-label" style="font-size:0.9rem;color:var(--bl-gold-bright);min-height:2rem;margin:0.5rem 0 0"></p>
+      </div>
+    </section>
+
+    <section class="bl-section bl-section--band">
+      <div class="bl-container bl-split" style="align-items:center">
+        <div class="bl-reveal bl-stack3d-host--wide">
+          <div data-stack3d-host="pelicula-termica"></div>
+        </div>
+        <div class="bl-reveal bl-reveal-delay-1">
+          <p class="bl-eyebrow">Nanotecnologia</p>
+          <h2 class="bl-h2" style="border:none;padding:0">Camadas da película térmica</h2>
+          <p class="bl-lead">Partículas de nanocerâmica ou carbono bloqueiam infravermelho e UV sem comprometer a visibilidade — conforto térmico mensurável em cada camada.</p>
+        </div>
       </div>
     </section>
 
@@ -142,6 +156,7 @@
   <script src="js/site.js" defer></script>
   <script src="js/blackline.js" defer></script>
   <script src="js/blackline-motion.js" defer></script>
+  <script src="js/blackline-3d.js" defer></script>
   <script src="components.js" defer></script>
 </body>
 </html>

@@ -192,6 +192,7 @@
     window.BlackLine?.initTintSimulator?.();
     window.BlackLine?.injectWaFloat?.();
     window.BlackLineSeo?.injectJsonLd?.();
+    window.BlackLine3d?.initStack3d?.();
   } catch (err) {
     console.error('[BlackLine components.js]', err);
   }

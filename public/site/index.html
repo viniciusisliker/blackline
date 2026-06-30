@@ -24,6 +24,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/blackline-site.css" />
   <link rel="stylesheet" href="css/blackline-motion.css" />
+  <link rel="stylesheet" href="css/blackline-3d.css" />
 </head>
 <body data-page="home">
   <div class="bl-preloader" id="bl-preloader" aria-hidden="true">
@@ -102,6 +103,16 @@
       <div class="bl-container">
         <h2 class="bl-h2 bl-reveal">Sistemas de proteção · Vidros</h2>
         <p class="bl-lead bl-reveal bl-reveal-delay-1" style="margin-bottom:2.5rem">Reforço estrutural exclusivo BlackLine para integridade do vidro em impactos.</p>
+        <div class="bl-split" style="margin-bottom:2.5rem;align-items:center">
+          <div class="bl-reveal bl-stack3d-host--wide">
+            <div data-stack3d-host="defense-glass"></div>
+          </div>
+          <div class="bl-reveal bl-reveal-delay-1">
+            <p class="bl-eyebrow">Anatomia técnica</p>
+            <h3 class="bl-h3" style="border:none;padding:0">Defense GLASS em camadas</h3>
+            <p style="color:var(--bl-text-muted);margin:0.75rem 0 0">O impacto é absorvido pelo filme de reforço antes de atingir o vidro. Coesão total — sem estilhaçamento, com até <strong style="color:var(--bl-gold-bright)">180 kg</strong> de resistência documentada.</p>
+          </div>
+        </div>
         <div class="bl-grid bl-grid--2" data-stagger>
           <article class="bl-card bl-reveal">
             <span style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--bl-gold);display:block;margin-bottom:0.5rem">7 anos · Shield Glass Plus</span>
@@ -136,17 +147,16 @@
           </div>
           <a href="antivandalismo.html" class="bl-btn bl-btn--gold" style="margin-top:2rem">Conhecer a tecnologia</a>
         </div>
-        <div class="bl-split__media bl-reveal bl-reveal-delay-2 bl-media-img">
-          <img src="img/antivandalismo-hero.png" alt="Película antivandalismo instalada" width="800" height="500" loading="lazy" decoding="async" class="bl-media-img" />
-          <div class="bl-split__media-overlay"></div>
+        <div class="bl-reveal bl-reveal-delay-2 bl-stack3d-host--wide">
+          <div data-stack3d-host="antivandalismo"></div>
         </div>
       </div>
     </section>
 
     <section class="bl-section bl-section--raised">
       <div class="bl-container bl-split">
-        <div class="bl-split__media bl-reveal bl-media-img" style="order:2">
-          <img src="img/ppf-hero.png" alt="PPF paint protection film" width="800" height="500" loading="lazy" decoding="async" class="bl-media-img" />
+        <div class="bl-reveal bl-stack3d-host--wide" style="order:2">
+          <div data-stack3d-host="ppf"></div>
         </div>
         <div class="bl-reveal bl-reveal-delay-1" style="order:1">
           <p class="bl-eyebrow">Paint Protection Film</p>
@@ -186,6 +196,7 @@
   <script src="js/site.js" defer></script>
   <script src="js/blackline.js" defer></script>
   <script src="js/blackline-motion.js" defer></script>
+  <script src="js/blackline-3d.js" defer></script>
   <script src="components.js" defer></script>
 </body>
 </html>

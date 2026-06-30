@@ -24,6 +24,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/blackline-site.css" />
   <link rel="stylesheet" href="css/blackline-motion.css" />
+  <link rel="stylesheet" href="css/blackline-3d.css" />
 </head>
 <body data-page="antivandalismo">
   <div id="bl-navbar"></div>
@@ -89,8 +90,8 @@
             <p style="margin:0;font-size:0.9rem;color:var(--bl-text-muted)">Mesmo fraturado, o vidro permanece no caixilho impedindo acesso imediato.</p>
           </div>
         </div>
-        <div class="bl-split__media bl-reveal bl-reveal-delay-1">
-          <img src="img/antivandalismo-glass.png" alt="Tecnologia de coesão em vidro blindado" loading="lazy" class="bl-media-img" />
+        <div class="bl-reveal bl-reveal-delay-1 bl-stack3d-host--wide">
+          <div data-stack3d-host="antivandalismo"></div>
         </div>
       </div>
     </section>
@@ -122,6 +123,7 @@
   <script src="js/site.js" defer></script>
   <script src="js/blackline.js" defer></script>
   <script src="js/blackline-motion.js" defer></script>
+  <script src="js/blackline-3d.js" defer></script>
   <script src="components.js" defer></script>
 </body>
 </html>
