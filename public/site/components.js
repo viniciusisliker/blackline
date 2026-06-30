@@ -163,7 +163,7 @@
         <span class="material-symbols-outlined" aria-hidden="true">request_quote</span>
         Orçamento
       </a>
-      <a href="https://wa.me/5511939287036" class="bl-mobile-bar__item" target="_blank" rel="noopener">
+      <a href="https://wa.me/5511939287036" class="bl-mobile-bar__item bl-mobile-bar__item--secondary" target="_blank" rel="noopener">
         <span class="bl-icon-whatsapp" aria-hidden="true"></span>
         WhatsApp
       </a>
